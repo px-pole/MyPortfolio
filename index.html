@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./styles/modern-normalize.css">
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="./styles/components/header.css">
+	<link rel="stylesheet" href="./styles/components/hero.css">
+	<link rel="stylesheet" href="./styles/components/about.css">
+	<link rel="stylesheet" href="./styles/components/work.css">
+	<link rel="stylesheet" href="./styles/components/contact.css">
+	<link rel="stylesheet" href="./styles/components/footer.css">
+	<link rel="stylesheet" href="./styles/components/mobile-nav.css">
+	<link rel="stylesheet" href="./styles/utils.css">
+
+  	</head>
+  	<body>
+
+    	<header class="header container">
+			<nav>
+				<ul class="header__menu">
+					<li>
+						<a class="header__link" href="#about">About</a>
+					</li>
+					<li>
+						<a class="header__link" href="#projects">Projects</a>
+					</li>
+					<li>
+						<a class="header__link" href="#contact">Contact</a>
+					</li>
+					<li class="header__line"></li>
+					<li><a class="header__link" href="https://github.com/px-pole" target="_blank"><i class='bx bxl-github'></i></a></li>
+					<li><a class="header__link" href="https://x.com/px_pole" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+					<li><a class="header__link" href="https://www.linkedin.com/in/karol-maciuk-23a481336/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+					<li class="header__line"></li>
+					<li>
+						<button id="theme-toggle" class="header__sun">
+							<svg 
+							xmlns="http://www.w3.org/2000/svg" 
+							viewBox="0 0 24 24" 
+							fill="currentColor"
+							>
+							<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+							</svg>
+						</button>
+					</li>
+					<li>
+						<a class="header__resume btn" href="#">Resume</a>
+					</li>
+				</ul>
+				<button class="header__bars">
+					<svg 
+					xmlns="http://www.w3.org/2000/svg" 
+					viewBox="0 0 24 24" 
+					fill="currentColor"
+					>
+					<path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+					</svg>
+				</button>
+			</nav>
+		</header>
+
+		<!-- Mobile Navigation -->
+		 <div class="mobile-nav">
+			 <nav>
+				<ul class="mobile-nav__menu">
+					<li><a class="mobile-nav__link" href="#about">About</a></li>
+					<li><a class="mobile-nav__link" href="#projects">Projects</a></li>
+					<li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+					<li class="mobile-nav__link-line"></li>
+					<div class="mobile-nav__social-links">
+						<li><a class="mobile-nav__link" href="https://github.com/px-pole" target="_blank"><i class='bx bxl-github'></i></a></li>
+						<li><a class="mobile-nav__link" href="https://x.com/px_pole" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+						<li><a class="mobile-nav__link" href="https://www.linkedin.com/in/karol-maciuk-23a481336/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+					</div>
+					<li class="mobile-nav__link-line"></li>
+					<li>
+						<button id="theme-toggle" class="mobile-nav__sun">
+							<svg 
+							xmlns="http://www.w3.org/2000/svg" 
+							viewBox="0 0 24 24" 
+							fill="currentColor"
+							>
+							<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+							</svg>
+						</button>
+					</li>
+					<li><a class="mobile-nav__btn btn" href="">Resume</a></li>
+				</ul>
+			 </nav>
+		 </div>
+		<!-- End of Mobile Navigation -->
+    
+		<main>
+			<section class="hero container">
+				<img 
+					class="hero__img" 
+					src="./public/hero.jpg" 
+					alt="Profile picture"
+				>
+				<h2 class="hero__subtitle">Hi, I'm <strong>Karol</strong> 👋</h2>
+				<h1 class="hero__title">FRONT-END <br> WEB DEVELOPER.</h1>
+				<p class="hero__description">
+					Aspiring developer creating innovative solutions for a better tomorrow.<br><br>"It's not a bug - it's an undocumented feature."<br>- Anonymous
+				</p>
+				<a class="hero__btn btn" href="mailto:karol@gmail.com" target="_blank">Reach out</a>
+			</section>
+
+			<button onclick="topFunction()" class="top-btn" title="Go to top">Back to top</button>
+			
+			<section id="about" class="about container section">
+				<div class="about__content">
+					<h2 class="about__title">About</h2>
+					<p class="about__description">
+						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here at 21, bringing with me a deep appreciation for hard work and growth.
+					</p>
+					<p class="about__description">
+						I love discovering new things and watching my creations evolve as I work on them. I'm always <strong>eager to learn and create</strong>—whether it's in my professional journey or personal pursuits
+					</p>
+					<p class="about__description">
+						When I'm not coding, you can find me immersed in video games, cheering for my favorite football team, or exploring the latest in tech trends.
+					</p>
+					<hr class="about__hr">
+					<h3 class="about__subtitle">Technologies</h3>
+					<div class="about__ul_container">
+						<ul class="about__ul">
+							<li class="about__list"><i class='bx bxl-html5'></i></i> HTML</li>
+							<li class="about__list"><i class='bx bxl-css3' ></i> CSS</li>
+							<li class="about__list"><i class='bx bxl-javascript' ></i> JavaScript</li>
+						</ul>
+						<ul class="about__ul">
+							<li class="about__list"><i class='bx bxs-data' ></i> SQL</li>
+							<li class="about__list"><i class='bx bxl-python' ></i> Python</li>
+							<li class="about__list"><i class='bx bxl-react'></i> React (soon)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="about__img-wrapper">
+					<img class="about__image" src="./public/about.jpg" alt="About profile picture">
+				</div>
+			</section>
+
+			<section id="projects" class="work container section">
+				<h2 class="work__title">Projects</h2>
+				<p class="work__description">
+					Mollit pariatur tempor nisi dolor non consequat magna cupidatat reprehenderit. Aliquip excepteur ullamco aliquip magna est et commodo deserunt ipsum.
+				</p>
+				<div class="work__container">
+				  	<!-- Project 1 -->
+					<h3 class="work__project-title">Amazon product clone</h3>
+					<div class="work__img-wrapper work__image1">
+					<img
+						src="./public/amz.png"
+						alt="Preview of my amazon product clone"
+						class="work__img"
+						/>
+				</div>
+				<div class="work__project work__content1">
+					<h3 class="work__project-subtitle">Amazon product clone</h3>
+					<p>
+					  	<ul class="work__project-description1">
+							<li><i class='bx bxl-html5'></i> 35%</li>
+							<li><i class='bx bxl-css3'></i> 65%</li>
+						</ul>
+					</p>
+					<p class="work__project-description2">
+						Very simple Amazon product showcase using HTML and CSS. 
+					</p>
+					<a class="btn work__project-btn" href="https://chic-hotteok-f9acc1.netlify.app/" target="_blank">Website</a>
+				</div>
+					<!-- Project 2 -->
+					<h3 class="work__project-title">Basketball scoreboard</h3>
+					<div class="work__img-wrapper work__image2">
+						<img
+							src="./public/basketball.png"
+							alt="Preview of my Basketball scoreboard project"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content2">
+						<h3 class="work__project-subtitle">Basketball scoreboard</h3>
+						<p>
+							<ul class="work__project-description1">
+							  <li><i class='bx bxl-html5'></i> 20%</li>
+							  <li><i class='bx bxl-css3'></i> 53%</li>
+							  <li><i class='bx bxl-javascript'></i> 27%</li>
+						  </ul>
+					  </p>
+						<p class="work__project-description2">
+							Scoreboard for the basketball game. Increments the score by 1, 2 or 3 points .
+						</p>
+						<a class="btn work__project-btn" href="https://tangerine-torte-d81067.netlify.app/" target="_blank">Website</a>
+					</div>
+					<!-- Project 3 -->
+					<h3 class="work__project-title">Blackjack game</h3>
+					<div class="work__img-wrapper work__image3">
+						<img
+							src="./public/blackjack.png"
+							alt="Preview of my Blackjack game project"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content3">
+						<h3 class="work__project-subtitle">Blackjack game</h3>
+						<p>
+							<ul class="work__project-description1">
+							  <li><i class='bx bxl-html5'></i> 17%</li>
+							  <li><i class='bx bxl-css3'></i> 30%</li>
+							  <li><i class='bx bxl-javascript'></i> 53%</li>
+						  </ul>
+					  </p>
+						<p class="work__project-description2">
+							The game starts with two random card values. You can draw more. Game ends on Blackjack or bust.
+						</p>	
+						<a class="btn work__project-btn" href="https://famous-salmiakki-51c034.netlify.app/" target="_blank">Website</a>
+					</div>
+					<!-- Project 4 -->
+					<h3 class="work__project-title">Password generator</h3>
+					<div class="work__img-wrapper work__image4">
+						<img
+							src="./public/password.png"
+							alt="Preview of my Password generator website"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content4">
+						<h3 class="work__project-subtitle">Password generator</h3>
+						<p>
+							<ul class="work__project-description1">
+							  <li><i class='bx bxl-html5'></i> 16%</li>
+							  <li><i class='bx bxl-css3'></i> 55%</li>
+							  <li><i class='bx bxl-javascript'></i> 29%</li>
+						  </ul>
+					  </p>
+						<p class="work__project-description2">
+							Generates two randomized strings. Set the length, exclude special characters and copy the result.
+						</p>
+						<a class="btn work__project-btn" href="#">Website</a>
+					</div>
+					<!-- Project 5 -->
+					<h3 class="work__project-title">Browser extension</h3>
+					<div class="work__img-wrapper work__image5">
+						<img
+							src="./public/bookmark.png"
+							alt="Preview of my Browser extension project"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content5">
+						<h3 class="work__project-subtitle">Browser extension</h3>
+						<p>
+							<ul class="work__project-description1">
+							  <li><i class='bx bxl-html5'></i> 15%</li>
+							  <li><i class='bx bxl-css3'></i> 42%</li>
+							  <li><i class='bx bxl-javascript'></i> 43%</li>
+						  </ul>
+					  </p>
+						<p class="work__project-description2">
+							Allows to save the website url either by the input window or grabbing from the currently active tab.
+						</p>
+						<a class="btn work__project-btn" href="https://github.com/px-pole/myBookmark-chrome-extension/tree/main" target="_blank">Website</a>
+					</div>
+					<!-- Project 6 -->
+					<h3 class="work__project-title">Old Portfolio</h3>
+					<div class="work__img-wrapper work__image6">
+						<img
+							src="./public/amz.png"
+							alt="lorem"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content6">
+						<h3 class="work__project-subtitle">Lorem, ipsum dolor.</h3>
+						<p>
+							<ul class="work__project-description1">
+							  <li><i class='bx bxl-html5'></i> 15%</li>
+							  <li><i class='bx bxl-css3'></i> 42%</li>
+							  <li><i class='bx bxl-javascript'></i> 43%</li>
+						  </ul>
+					  </p>
+						<p class="work__project-description2">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, ullam!
+						</p>
+						<a class="btn work__project-btn" href="#">Website</a>
+					</div>
+				</div>
+				</section>
+
+				<section id="contact" class="contact container section">
+					<h2 class="contact__title">Get In Contact</h2>
+					<p class="contact__description">Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.</p>
+					<a class="contact__btn btn" href="mailto:karol.maciuk@gmail.com" target="_blank">Reach Out</a>
+
+				</section>
+		</main>
+    
+		<footer class="footer container section">
+			<h3 class=" footer__title">~ Karol Maciuk ~</h3>
+		</footer>
+		
+		<script src="./src/script.js"></script>
+ 	 </body>
+</html>

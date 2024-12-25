@@ -1,0 +1,89 @@
+:root {
+    --color-dark: #070a13;      /* rgb(7, 10, 19) */
+    --color-light: #f1f5f9;     /* rgb(241, 245, 249) */
+    --color-slate400: #94a3b8;  /* rgb(148, 163, 184) */
+    --color-slate600: #475569;  /* rgb(71, 85, 105) */
+    --color-slate800: #1e293b;  /* rgb(30, 41, 59) */
+    --color-orange: #c2410c;    /* rgb(194, 65, 12) */
+    --color-indigo: #4f46e5;    /* rgb(79, 70, 229) */
+
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-s: 0.875rem;
+    --size-m: 1rem;
+    --size-l: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10x: 10rem;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.light-mode {
+    --color-light: #070a13;
+    --color-dark: #f1f5f9;
+    --color-slate400: #1e293b;
+    --color-slate600: #1e293b;
+    --color-slate800: #1e293b;
+}
+
+body {
+    font-family: 'General Sans', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    color: var(--color-indigo);
+}
+
+strong {
+    color: var(--color-indigo);
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-orange);
+    outline: 1px solid var(--color-orange);
+}

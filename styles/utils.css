@@ -1,0 +1,113 @@
+/* extra small */
+/* @media (min-width: 475px) {} */
+/* small */
+/* @media (min-width: 640px) {} */
+/* medium */
+/* @media (min-width: 768px) {} */
+/* large */
+/* @media (min-width: 1024px) {} */
+/* extra large */
+/* @media (min-width: 1280px) {} */
+/* 2XL */
+/* @media (min-width: 1536px) {} */
+
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    background-color: var(--color-orange);
+    color: #f1f5f9;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(194, 65, 12, 0.5), 0 6px 6px rgba(194, 65, 12, 0.5), 0 0 100px -10px var(--color-orange);
+    transition: transform 0.3s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(194, 65, 12, 0.25), 0 10px 10px rgba(194, 65, 12, 0.22), 0 0 120px -10px var(--color-orange);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.section {
+    margin-top: 5rem;
+}
+
+.top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    background-color: var(--color-orange);
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #f1f5f9;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(194, 65, 12, 0.5), 0 6px 6px rgba(194, 65, 12, 0.5), 0 0 100px -10px var(--color-orange);
+    transition: transform 0.3s, box-shadow 0.2s;
+}
+
+  
+.top-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(194, 65, 12, 0.25), 0 10px 10px rgba(194, 65, 12, 0.22), 0 0 120px -10px var(--color-orange);
+}
+
+
+/* extra small */
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* small */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* medium */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* large */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    .section {
+        margin-top: 10rem;
+    }
+}
+
+/* extra large */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* 2XL */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}

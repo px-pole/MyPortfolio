@@ -6,7 +6,7 @@
 		<meta name="description" content="Portfolio created by Karol Maciuk"/>
 		<title>Karol M</title>
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-		<link rel="stylesheet" href="./styles/modern-normalize.css">
+		<link rel="stylesheet" href="./styles/normalize.css">
 		<link rel="stylesheet" href="./styles/style.css">
 		<link rel="stylesheet" href="./styles/components/header.css">
 		<link rel="stylesheet" href="./styles/components/hero.css">
@@ -49,7 +49,12 @@
 						</button>
 					</li>
 					<li>
-						<a class="header__resume btn" href="#">Resume</a>
+						<a 
+							class="header__resume btn" 
+							aria-label="Link to the resume" 
+							href="#">
+							Resume
+						</a>
 					</li>
 				</ul>
 				<button class="header__bars">
@@ -68,14 +73,41 @@
 		<div class="mobile-nav">
 			<nav>
 				<ul class="mobile-nav__menu">
-					<li><a class="mobile-nav__link" href="#about">About</a></li>
-					<li><a class="mobile-nav__link" href="#projects">Projects</a></li>
-					<li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+					<li>
+						<a class="mobile-nav__link" href="#about">About</a>
+					</li>
+					<li>
+						<a class="mobile-nav__link" href="#projects">Projects</a>
+					</li>
+					<li>
+						<a class="mobile-nav__link" href="#contact">Contact</a>
+					</li>
 					<li class="mobile-nav__link-line"></li>
 					<div class="mobile-nav__social-links">
-						<li><a class="mobile-nav__link" href="https://github.com/px-pole" target="_blank"><i class='bx bxl-github'></i></a></li>
-						<li><a class="mobile-nav__link" href="https://x.com/px_pole" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-						<li><a class="mobile-nav__link" href="https://www.linkedin.com/in/karol-maciuk-23a481336/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+						<li>
+							<a 
+								class="mobile-nav__link" 
+								href="https://github.com/px-pole" 
+								target="_blank">
+								<i class='bx bxl-github'></i>
+							</a>
+						</li>
+						<li>
+							<a 
+								class="mobile-nav__link" 
+								href="https://x.com/px_pole" 
+								target="_blank">
+								<i class='bx bxl-twitter'></i>
+							</a>
+						</li>
+						<li>
+							<a 
+								class="mobile-nav__link" 
+								href="https://www.linkedin.com/in/karol-maciuk-23a481336/" 
+								target="_blank">
+								<i class='bx bxl-linkedin'></i>
+							</a>
+						</li>
 					</div>
 					<li class="mobile-nav__link-line"></li>
 					<li>
@@ -89,7 +121,14 @@
 							</svg>
 						</button>
 					</li>
-					<li><a class="mobile-nav__btn btn" href="">Resume</a></li>
+					<li>
+						<a 
+							class="mobile-nav__btn btn" 
+							aria-label="Link to the resume" 
+							href="#">
+							Resume
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -105,18 +144,32 @@
 				<h2 class="hero__subtitle">Hi, I'm <strong>Karol</strong> 👋</h2>
 				<h1 class="hero__title">FRONT-END <br/> WEB DEVELOPER.</h1>
 				<p class="hero__description">
-					Aspiring developer creating innovative solutions for a better tomorrow.<br/><br/>"It's not a bug - it's an undocumented feature."<br/>- Anonymous
+					Aspiring developer creating innovative solutions for a better tomorrow.<br/><br/>
+					"It's not a bug - it's an undocumented feature."<br/>
+					- Anonymous
 				</p>
-				<a class="hero__btn btn" href="mailto:karol.maciuk@gmail.com" target="_blank">Reach out</a>
+				<a 
+					class="hero__btn btn" 
+					aria-label="Send me an email button" 
+					href="mailto:karol.maciuk@gmail.com" 
+					target="_blank">
+					Reach out
+				</a>
 			</section>
 
-			<button onclick="topFunction()" class="top-btn" title="Go to top">Back to top</button>
+			<button 
+				onclick="topFunction()" 
+				class="top-btn" 
+				aria-label="Go back to top of the page button" 
+				title="Go to top">
+				Back to top
+			</button>
 			
 			<section id="about" class="about container section">
 				<div class="about__content">
 					<h2 class="about__title">About</h2>
 					<p class="about__description">
-						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here at 21, bringing with me a deep appreciation for hard work and growth.
+						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here, bringing with me a deep appreciation for hard work and growth.
 					</p>
 					<p class="about__description">
 						I love discovering new things and watching my creations evolve as I work on them. I'm always <strong>eager to learn and create</strong>—whether it's in my professional journey or personal pursuits
@@ -128,19 +181,35 @@
 					<h3 class="about__subtitle">Technologies</h3>
 					<div class="about__ul_container">
 						<ul class="about__ul">
-							<li class="about__list"><i class='bx bxl-html5'></i></i> HTML</li>
-							<li class="about__list"><i class='bx bxl-css3' ></i> CSS</li>
-							<li class="about__list"><i class='bx bxl-javascript' ></i> JavaScript</li>
+							<li class="about__list">
+								<i class='bx bxl-html5'></i> HTML
+							</li>
+							<li class="about__list">
+								<i class='bx bxl-css3' ></i> CSS
+							</li>
+							<li class="about__list">
+								<i class='bx bxl-javascript' ></i> JavaScript
+							</li>
 						</ul>
 						<ul class="about__ul">
-							<li class="about__list"><i class='bx bxs-data' ></i> SQL</li>
-							<li class="about__list"><i class='bx bxl-python' ></i> Python</li>
-							<li class="about__list"><i class='bx bxl-react'></i> React (soon)</li>
+							<li class="about__list">
+								<i class='bx bxs-data' ></i> SQL
+							</li>
+							<li class="about__list">
+								<i class='bx bxl-python' ></i> Python
+							</li>
+							<li class="about__list">
+								<i class='bx bxl-react'></i> React (soon)
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="about__img-wrapper">
-					<img class="about__image" src="./images/about.avif" alt="About profile picture"/>
+					<img 
+						class="about__image" 
+						src="./images/about.avif" 
+						alt="About profile picture"
+						/>
 				</div>
 			</section>
 
@@ -149,7 +218,13 @@
 				<p class="work__description">
 					Explore my work to see how I approach challenges and turn ideas into functional and user-friendly solutions.<br/>
 					Visit my Github page to see more.<br/>
-					<a href="https://github.com/px-pole"></a><button class="work__btn btn"><i class='bx bxl-github'></i></button></a>
+					<a 
+						class="work__btn btn" 
+						aria-label="Link to my Github profile" 
+						href="https://github.com/px-pole" 
+						target="_blank">
+						<i class='bx bxl-github'></i>
+					</a>
 				</p>
 				<div class="work__container">
 				  	
@@ -166,14 +241,24 @@
 					<h3 class="work__project-subtitle">Amazon product clone</h3>
 					<p>
 					  	<ul class="work__project-description1">
-							<li><i class='bx bxl-html5'></i> 72.1%</li>
-							<li><i class='bx bxl-css3'></i> 27.9%</li>
+							<li>
+								<i class='bx bxl-html5'></i> 72.1%
+							</li>
+							<li>
+								<i class='bx bxl-css3'></i> 27.9%
+							</li>
 						</ul>
 					</p>
 					<p class="work__project-description2">
 						My very first project. Simple Amazon product showcase using HTML and CSS elements like <strong>flexbox</strong> and custom fonts. 
 					</p>
-					<a class="btn work__project-btn" href="https://chic-hotteok-f9acc1.netlify.app/" target="_blank">Website</a>
+					<a 
+						class="btn work__project-btn" 
+						aria-label="Link to my project website" 
+						href="https://chic-hotteok-f9acc1.netlify.app/" 
+						target="_blank">
+						Website
+					</a>
 				</div>
 					
 					<!-- Project 2 -->
@@ -189,15 +274,27 @@
 						<h3 class="work__project-subtitle">Basketball scoreboard</h3>
 						<p>
 							<ul class="work__project-description1">
-							  <li><i class='bx bxl-html5'></i> 31.9%</li>
-							  <li><i class='bx bxl-css3'></i> 43.1%</li>
-							  <li><i class='bx bxl-javascript'></i> 25%</li>
+							  	<li>
+									<i class='bx bxl-html5'></i> 31.9%
+								</li>
+							  	<li>
+									<i class='bx bxl-css3'></i> 43.1%
+								</li>
+							  	<li>
+									<i class='bx bxl-javascript'></i> 25%
+								</li>
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
 							Scoreboard for the basketball game. Increments the score by 1, 2 or 3 points. Build using the JS concepts like <strong>textContent and onclick functions</strong>.
 						</p>
-						<a class="btn work__project-btn" href="https://tangerine-torte-d81067.netlify.app/" target="_blank">Website</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="https://tangerine-torte-d81067.netlify.app/" 
+							target="_blank">
+							Website
+						</a>
 					</div>
 					
 					<!-- Project 3 -->
@@ -213,15 +310,27 @@
 						<h3 class="work__project-subtitle">Blackjack game</h3>
 						<p>
 							<ul class="work__project-description1">
-							  <li><i class='bx bxl-html5'></i> 22%</li>
-							  <li><i class='bx bxl-css3'></i> 24.5%</li>
-							  <li><i class='bx bxl-javascript'></i> 53.5%</li>
+							  	<li>
+									<i class='bx bxl-html5'></i> 22%
+								</li>
+							  	<li>
+									<i class='bx bxl-css3'></i> 24.5%
+								</li>
+							  	<li>
+									<i class='bx bxl-javascript'></i> 53.5%
+								</li>
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
 							The game starts with two random card values. You can draw more in order to reach 21 points. Game ends on Blackjack or bust. Contains JS concepts like <strong>arrays, if else statements, for loops and Math objects.</strong>
 						</p>	
-						<a class="btn work__project-btn" href="https://famous-salmiakki-51c034.netlify.app/" target="_blank">Website</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="https://famous-salmiakki-51c034.netlify.app/" 
+							target="_blank">
+							Website
+						</a>
 					</div>
 					
 					<!-- Project 4 -->
@@ -237,15 +346,26 @@
 						<h3 class="work__project-subtitle">Password generator</h3>
 						<p>
 							<ul class="work__project-description1">
-							  <li><i class='bx bxl-html5'></i> 19.6%</li>
-							  <li><i class='bx bxl-css3'></i> 33.9%</li>
-							  <li><i class='bx bxl-javascript'></i> 46.5%</li>
+								<li>
+									<i class='bx bxl-html5'></i> 19.6%
+								</li>
+								<li>
+									<i class='bx bxl-css3'></i> 33.9%
+								</li>
+								<li>
+									<i class='bx bxl-javascript'></i> 46.5%
+								</li>
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
 							Generates two randomized strings. Allows to set the length of the password (6 - 42 characters) and an option to exclude special characters. Build with JS functions, for loops, if else statements, Math objects and DOM manipulation.
 						</p>
-						<a class="btn work__project-btn" href="#">Website</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="https://wonderful-lamington-57d9aa.netlify.app/">
+							Website
+						</a>
 					</div>
 					
 					<!-- Project 5 -->
@@ -261,15 +381,27 @@
 						<h3 class="work__project-subtitle">Browser extension</h3>
 						<p>
 							<ul class="work__project-description1">
-							  <li><i class='bx bxl-html5'></i> 22%</li>
-							  <li><i class='bx bxl-css3'></i> 26%</li>
-							  <li><i class='bx bxl-javascript'></i> 52%</li>
+								<li>
+									<i class='bx bxl-html5'></i> 22%
+								</li>
+								<li>
+									<i class='bx bxl-css3'></i> 26%
+								</li>
+								<li>
+									<i class='bx bxl-javascript'></i> 52%
+								</li>
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
 							Allows to save the website url either by the input window or grabbing from the currently active tab. Introduces <strong>innerHTML, inner.value, function parameters and arguments, template strings, localStorage and JSON objects.</strong>
 						</p>
-						<a class="btn work__project-btn" href="https://github.com/px-pole/myBookmark-chrome-extension/tree/main" target="_blank">Website</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="https://github.com/px-pole/myBookmark-chrome-extension/tree/main" 
+							target="_blank">
+							Website
+						</a>
 					</div>
 					
 					<!-- Project 6 -->
@@ -285,15 +417,26 @@
 						<h3 class="work__project-subtitle">Lorem, ipsum dolor.</h3>
 						<p>
 							<ul class="work__project-description1">
-							  <li><i class='bx bxl-html5'></i> 15%</li>
-							  <li><i class='bx bxl-css3'></i> 42%</li>
-							  <li><i class='bx bxl-javascript'></i> 43%</li>
+								<li>
+									<i class='bx bxl-html5'></i> 15%
+								</li>
+								<li>
+									<i class='bx bxl-css3'></i> 42%
+								</li>
+								<li>
+									<i class='bx bxl-javascript'></i> 43%
+								</li>
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, ullam!
 						</p>
-						<a class="btn work__project-btn" href="#">Website</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="#">
+							Website
+						</a>
 					</div>
 				</div>
 				</section>
@@ -301,7 +444,13 @@
 				<section id="contact" class="contact container section">
 					<h2 class="contact__title">Get In Contact</h2>
 					<p class="contact__description">Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.</p>
-					<a class="contact__btn btn" href="mailto:karol.maciuk@gmail.com" target="_blank">Reach Out</a>
+					<a 
+						class="contact__btn btn" 
+						aria-label="Send me an email button" 
+						href="mailto:karol.maciuk@gmail.com" 
+						target="_blank">
+						Reach Out
+					</a>
 				</section>
 		</main>
     

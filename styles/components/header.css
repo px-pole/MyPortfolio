@@ -38,8 +38,18 @@
         letter-spacing: -0.05em;
         transition: color 0.3s;
     }
-    
+
     .header__link:hover {
+        color: var(--color-orange);
+    }
+
+    .header__link-social {
+        font-size: var(--size-m);
+        color: var(--color-slate600);
+        transition: color 0.3s;
+    }
+    
+    .header__link-social:hover {
         color: var(--color-orange);
     }
     
@@ -67,6 +77,10 @@
 @media (min-width: 1024px) {
     .header__link {
         font-size: var(--size-s);
+    }
+
+    .header__link-social {
+        font-size: var(--size-l);
     }
 
     .header__sun {

@@ -14,6 +14,11 @@
     margin: 1rem auto;
 }
 
+.work__btn {
+    margin-top: 0.75rem;
+    font-size: var(--size-s)
+}
+
 .work__project-title {
     font-size: var(--size-m);
     margin-bottom: 1rem;
@@ -106,6 +111,10 @@
         margin: 1.5rem auto;
     }
 
+    .work__btn {
+        font-size: var(--size-m)
+    }
+
     .work__project-title {
         font-size: var(--size-l);
         margin-bottom: 1.5rem;
@@ -127,6 +136,10 @@
 }
 
 @media (min-width: 640px) {
+    .work__btn {
+        font-size: var(--size-xs)
+    }
+
     .work__img {
         --w: 19.5rem;
         --h: 19.5rem;
@@ -230,6 +243,10 @@
 }
 
 @media (min-width: 768px) {
+    .work__btn {
+        font-size: var(--size-l)
+    }
+
     .work__img {
         --w: 23.5rem;
         --h: 23.5rem;
@@ -253,6 +270,10 @@
 }
 
 @media (min-width: 1024px) {
+    .work__btn {
+        font-size: var(--size-m)
+    }
+
     .work__img {
         --w: 31.5625rem;
         --h: 31.5625rem;
@@ -291,6 +312,10 @@
     .work__description {
         font-size: var(--size-xl);
         margin: 2rem auto;
+    }
+
+    .work__btn {
+        font-size: var(--size-l)
     }
 
     .work__project-description1 {

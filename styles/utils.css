@@ -18,7 +18,7 @@
     text-decoration: none;
     letter-spacing: -0.05em;
     background-color: var(--color-orange);
-    color: #f1f5f9;
+    color: var(--color-light);
     padding: 0.5em 1em;
     border-radius: 6px;
     box-shadow: 0 10px 20px rgba(194, 65, 12, 0.5), 0 6px 6px rgba(194, 65, 12, 0.5), 0 0 100px -10px var(--color-orange);
@@ -46,14 +46,13 @@
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 20px;
     z-index: 99;
-    border: none;
     background-color: var(--color-orange);
     font-weight: 600;
     letter-spacing: -0.05em;
-    color: #f1f5f9;
-    cursor: pointer; /* Add a mouse pointer on hover */
+    color: var(--color-light);
+    cursor: pointer;
     padding: 0.5em 1em;
     border-radius: 6px;
     box-shadow: 0 10px 20px rgba(194, 65, 12, 0.5), 0 6px 6px rgba(194, 65, 12, 0.5), 0 0 100px -10px var(--color-orange);
@@ -67,28 +66,24 @@
 }
 
 
-/* extra small */
 @media (min-width: 475px) {
     .container {
         max-width: 475px;
     }
 }
 
-/* small */
 @media (min-width: 640px) {
     .container {
         max-width: 640px;
     }
 }
 
-/* medium */
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
 }
 
-/* large */
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
@@ -98,14 +93,12 @@
     }
 }
 
-/* extra large */
 @media (min-width: 1280px) {
     .container {
         max-width: 1280px;
     }
 }
 
-/* 2XL */
 @media (min-width: 1536px) {
     .container {
         max-width: 1536px;

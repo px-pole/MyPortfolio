@@ -32,7 +32,11 @@
 }
 
 .mobile-nav__social-links {
+    list-style: none;
+    padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -53,5 +57,12 @@
 }
 
 .mobile-nav__btn {
-    font-size: var(--size-s);
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    background-color: var(--color-orange);
+    color: var(--color-light);
+    padding: 0.5em 1.5em;
+    border-radius: 12px;
 }

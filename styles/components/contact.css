@@ -19,9 +19,44 @@
     max-width: 60ch;
 }
 
-.contact__btn {
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact__input {
+    width: 400px;
+    height: 40px;
+    padding-left: 1rem;
+    outline: none;
+    border: 2px solid var(--color-orange);
+    border-radius: 10px;
+    background-color: var(--color-dark);
+    color: var(--color-slate400);
+    font-weight: 600;
+}
+
+.contact__textarea {
+    height: 160px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.contact__input:focus {
+    border: 3px solid var(--color-slate400)
+}
+
+.contact__input::placeholder {
+    color: var(--color-slate600);
+    opacity: 0.6;
+}
+
+.contact__submit-btn {
     font-size: var(--size-s);
 }
+
 
 
 /* RESPONSIVENESS */
@@ -29,16 +64,13 @@
     .contact {
         gap: 1.5rem;
     }
-    
     .contact__title {
         font-size: var(--size-3xl);
     }
-    
     .contact__description {
         font-size: var(--size-m);
     }
-    
-    .contact__btn {
+    .contact__submit-btn {
         font-size: var(--size-m);
     }    
 }
@@ -47,12 +79,10 @@
     .contact__title {
         font-size: var(--size-4xl);
     }
-    
     .contact__description {
         font-size: var(--size-l);
     }
-    
-    .contact__btn {
+    .contact__submit-btn {
         font-size: var(--size-l);
     }  
 }
@@ -61,16 +91,13 @@
     .contact {
         gap: 2rem;
     }
-    
     .contact__title {
         font-size: var(--size-5xl);
     }
-    
     .contact__description {
         font-size: var(--size-xl);
     }
-    
-    .contact__btn {
+    .contact__submit-btn {
         font-size: var(--size-xl);
     }  
 }

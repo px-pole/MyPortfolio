@@ -15,8 +15,10 @@
 }
 
 .work__btn {
-    margin-top: 0.75rem;
+    margin: auto;
+    text-align: center;
     font-size: var(--size-s)
+    width: 4rem;
 }
 
 .work__project-title {
@@ -86,8 +88,23 @@
     margin: 1rem;
 }
 
+.work__project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 3rem;
+}
+
+.work__project-btn:not(.github-only) {
+    flex: 1 1 0;
+}
+
 .work__project-btn {
     font-size: var(--size-s);
+}
+
+.github-only {
+    width: 160px;
 }
 
 .work__project-subtitle {
@@ -101,35 +118,28 @@
         --w: 28.6875rem;
         --h: 28.6875rem;
     }
-    
     .work__title {
         font-size: var(--size-3xl);
     }
-    
     .work__description {
         font-size: var(--size-m);
         margin: 1.5rem auto;
     }
-
     .work__btn {
         font-size: var(--size-m)
     }
-
     .work__project-title {
         font-size: var(--size-l);
         margin-bottom: 1.5rem;
     }
-
     .work__project-description1 {
         font-size: var(--size-m);
         margin: 1.5rem 0;
     }
-    
     .work__project-description2 {
         font-size: var(--size-m);
         margin: 1.5rem;
     }
-
     .work__project-btn {
         font-size: var(--size-m);
     }
@@ -139,12 +149,10 @@
     .work__btn {
         font-size: var(--size-xs)
     }
-
     .work__img {
         --w: 19.5rem;
         --h: 19.5rem;
     }
-
     .work__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -157,88 +165,71 @@
         'content6 image6';
         place-items: center;
     }
-
     .work__image1 {
         grid-area: image1;
     }
-
     .work__image2 {
         grid-area: image2;
     }
-
     .work__image3 {
         grid-area: image3;
     }
-
     .work__image4 {
         grid-area: image4;
     }
-
     .work__image4 {
         grid-area: image4;
     }
-
     .work__image5 {
         grid-area: image5;
     }
-
     .work__image6 {
         grid-area: image6;
     }
-
     .work__content1 {
         grid-area: content1;
     }
-
     .work__content2 {
         grid-area: content2;
     }
-
     .work__content3 {
         grid-area: content3;
     }
-
     .work__content4 {
         grid-area: content4;
     }
-
     .work__content5 {
         grid-area: content5;
     }
-
     .work__content6 {
         grid-area: content6;
     }
-
     .work__project {
         padding: 0 1rem;
     }
-
     .work__project-title {
         display: none;
     }
-
     .work__project-description1 {
         font-size: var(--size-xs);
         margin: 1em 0;
     }
-    
     .work__project-description2 {
         font-size: var(--size-xs);
         margin: 1em;
     }
-
     .work__project-btn {
         font-size: var(--size-xs);
     }
-
     .work__project:not(:last-child) {
         margin-bottom: 0;
     }
-    
     .work__project-subtitle {
         display: block;
         font-size: var(--size-m);
+    }
+    .github-only {
+        width: 64px;
     }
 }
 
@@ -246,26 +237,24 @@
     .work__btn {
         font-size: var(--size-l)
     }
-
     .work__img {
         --w: 23.5rem;
         --h: 23.5rem;
     }
-
     .work__project-description1 {
         font-size: var(--size-s);
     }
-    
     .work__project-description2 {
         font-size: var(--size-s);
     }
-    
     .work__project-btn {
         font-size: var(--size-s);
     }
-    
     .work__project-subtitle {
         font-size: var(--size-l);
+    }
+    .github-only {
+        width: 92px;
     }
 }
 
@@ -273,34 +262,30 @@
     .work__btn {
         font-size: var(--size-m)
     }
-
     .work__img {
         --w: 31.5625rem;
         --h: 31.5625rem;
     }
-
     .work__title {
         font-size: var(--size-4xl);
     }
-    
     .work__description {
         font-size: var(--size-l);
     }
-
     .work__project-description1 {
         font-size: var(--size-m);
     }
-    
     .work__project-description2 {
         font-size: var(--size-m);
     }
-    
     .work__project-btn {
         font-size: var(--size-m);
     }
-    
     .work__project-subtitle {
         font-size: var(--size-xl);
+    }
+    .github-only {
+        width: 152px;
     }
 }
 
@@ -308,35 +293,31 @@
     .work__title {
         font-size: var(--size-5xl);
     }
-    
     .work__description {
         font-size: var(--size-xl);
         margin: 2rem auto;
     }
-
     .work__btn {
         font-size: var(--size-l)
     }
-
     .work__project-description1 {
         font-size: var(--size-l);
     }
-    
     .work__project-description2 {
         font-size: var(--size-l);
     }
-    
     .work__project-btn {
         font-size: var(--size-l);
     }
-    
     .work__project-subtitle {
         font-size: var(--size-2xl);
     }
-
     .work__container {
         width: 80%;
         margin: 0 auto;
+    }
+    .github-only {
+        width: 148px;
     }
 }
 

@@ -27,7 +27,7 @@
 							class="header__link" 
 							aria-label="Jump to about section button"
 							href="#about">
-							About
+							// about
 						</a>
 					</li>
 					<li>
@@ -35,7 +35,7 @@
 							class="header__link" 
 							aria-label="Jump to projects section button"
 							href="#projects">
-							Projects
+							// projects
 						</a>
 					</li>
 					<li>
@@ -43,11 +43,10 @@
 							class="header__link" 
 							aria-label="Jump to contact section button"
 							href="#contact">
-							Contact
+							// contact
 						</a>
 					</li>
-					<li class="header__line"></li>
-					<li>
+					<!-- <li>
 						<a 
 							class="header__link-social" 
 							aria-label="Link to my Github profile page."							
@@ -73,7 +72,7 @@
 							target="_blank">
 							<i class='bx bxl-linkedin'></i>
 						</a>
-					</li>
+					</li> -->
 					<li class="header__line"></li>
 					<li>
 						<button 
@@ -91,10 +90,10 @@
 					</li>
 					<li>
 						<a 
-							class="header__resume btn" 
+							class="header__cv btn" 
 							aria-label="Link to my CV document." 
 							href="#">
-							Resume
+							My CV
 						</a>
 					</li>
 				</ul>
@@ -141,7 +140,7 @@
 						</a>
 					</li>
 					<li class="mobile-nav__link-line"></li>
-					<div class="mobile-nav__social-links">
+					<ul class="mobile-nav__social-links">
 						<li>
 							<a 
 								class="mobile-nav__link" 
@@ -169,7 +168,7 @@
 								<i class='bx bxl-linkedin'></i>
 							</a>
 						</li>
-					</div>
+					</ul>
 					<li class="mobile-nav__link-line"></li>
 					<li>
 						<button 
@@ -187,10 +186,10 @@
 					</li>
 					<li>
 						<a 
-							class="mobile-nav__btn btn" 
+							class="mobile-nav__btn" 
 							aria-label="Link to my CV document." 
 							href="#">
-							Resume
+							My CV
 						</a>
 					</li>
 				</ul>
@@ -212,12 +211,41 @@
 					"It's not a bug - it's an undocumented feature."<br/>
 					- Anonymous
 				</p>
+				
+				<ul class="hero__socials">
+					<li>
+						<a 
+							class="hero__socials-link" 
+							aria-label="Link to my Github profile page."							
+							href="https://github.com/px-pole" 
+							target="_blank">
+							<i class='bx bxl-github'></i>
+						</a>
+					</li>
+					<li>
+						<a 
+							class="hero__socials-link" 
+							aria-label="Link to my Twitter profile page."
+							href="https://x.com/px_pole" 
+							target="_blank">
+							<i class='bx bxl-twitter'></i>
+						</a>
+					</li>
+					<li>
+						<a 
+							class="hero__socials-link" 
+							aria-label="Link to my Linkedin profile page."
+							href="https://www.linkedin.com/in/karol-maciuk-23a481336/" 
+							target="_blank">
+							<i class='bx bxl-linkedin'></i>
+						</a>
+					</li>
+				</ul>
 				<a 
-					class="hero__btn btn" 
-					aria-label="Send me an email button" 
-					href="mailto:karol.maciuk@gmail.com" 
-					target="_blank">
-					Reach out
+					class="hero__btn" 
+					aria-label="Go to contact section" 
+					href="#contact">
+					<span>Contact Me</span>
 				</a>
 			</section>
 
@@ -225,13 +253,14 @@
 				onclick="topFunction()" 
 				class="top-btn" 
 				aria-label="Go back to top of the page button" 
-				title="Go to top">
+				name="Go to top"
+				>
 				Back to top
 			</button>
 			
 			<section id="about" class="about container section">
 				<div class="about__content">
-					<h2 class="about__title">About</h2>
+					<h2 class="about__title">// about</h2>
 					<p class="about__description">
 						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here, bringing with me a deep appreciation for hard work and growth.
 					</p>
@@ -262,9 +291,6 @@
 							<li class="about__list">
 								<i class='bx bxl-python' ></i> Python
 							</li>
-							<li class="about__list">
-								<i class='bx bxl-react'></i> React (soon)
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -278,17 +304,10 @@
 			</section>
 
 			<section id="projects" class="work container section">
-				<h2 class="work__title">Projects</h2>
+				<h2 class="work__title">// projects</h2>
 				<p class="work__description">
 					Explore my work to see how I approach challenges and turn ideas into functional and user-friendly solutions.<br/>
-					Visit my Github page to see more.<br/>
-					<a 
-						class="work__btn btn" 
-						aria-label="Link to my Github profile" 
-						href="https://github.com/px-pole" 
-						target="_blank">
-						<i class='bx bxl-github'></i>
-					</a>
+					Visit my Github page to see more.
 				</p>
 				<div class="work__container">
 				  	
@@ -316,13 +335,22 @@
 					<p class="work__project-description2">
 						My very first project. Simple Amazon product showcase using HTML and CSS elements like <strong>flexbox</strong> and custom fonts. 
 					</p>
-					<a 
-						class="btn work__project-btn" 
-						aria-label="Link to my project website" 
-						href="https://chic-hotteok-f9acc1.netlify.app/" 
-						target="_blank">
-						Website
-					</a>
+					<div class="work__project-links">
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project github repository" 
+							href="https://github.com/px-pole/amazon-product-clone" 
+							target="_blank">
+							Github
+						</a>
+						<a 
+							class="btn work__project-btn" 
+							aria-label="Link to my project website" 
+							href="https://chic-hotteok-f9acc1.netlify.app/" 
+							target="_blank">
+							Web page
+						</a>
+					</div>
 				</div>
 					
 					<!-- Project 2 -->
@@ -352,13 +380,22 @@
 						<p class="work__project-description2">
 							Scoreboard for the basketball game. Increments the score by 1, 2 or 3 points. Build using the JS concepts like <strong>textContent and onclick functions</strong>.
 						</p>
-						<a 
-							class="btn work__project-btn" 
-							aria-label="Link to my project website" 
-							href="https://tangerine-torte-d81067.netlify.app/" 
-							target="_blank">
-							Website
-						</a>
+						<div class="work__project-links">
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project github repository" 
+								href="https://github.com/px-pole/basketball-scoreboard" 
+								target="_blank">
+								Github
+							</a>
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project website" 
+								href="https://tangerine-torte-d81067.netlify.app/" 
+								target="_blank">
+								Web page
+							</a>
+						</div>
 					</div>
 					
 					<!-- Project 3 -->
@@ -388,13 +425,22 @@
 						<p class="work__project-description2">
 							The game starts with two random card values. You can draw more in order to reach 21 points. Game ends on Blackjack or bust. Contains JS concepts like <strong>arrays, if else statements, for loops and Math objects.</strong>
 						</p>	
-						<a 
-							class="btn work__project-btn" 
-							aria-label="Link to my project website" 
-							href="https://famous-salmiakki-51c034.netlify.app/" 
-							target="_blank">
-							Website
-						</a>
+						<div class="work__project-links">
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project github repository" 
+								href="https://github.com/px-pole/blackjack-game" 
+								target="_blank">
+								Github
+							</a>
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project website" 
+								href="https://famous-salmiakki-51c034.netlify.app/" 
+								target="_blank">
+								Web page
+							</a>
+						</div>
 					</div>
 					
 					<!-- Project 4 -->
@@ -422,14 +468,23 @@
 						  </ul>
 					  	</p>
 						<p class="work__project-description2">
-							Generates two randomized strings. Allows to set the length of the password (6 - 42 characters) and an option to exclude special characters. Build with JS functions, for loops, if else statements, Math objects and DOM manipulation.
+							Generates two randomized strings. Allows to set the length of the password (6 - 42 characters) and an option to exclude special characters. Build with JS <strong>functions, for loops, if else statements, Math objects and DOM manipulation.</strong>
 						</p>
-						<a 
-							class="btn work__project-btn" 
-							aria-label="Link to my project website" 
-							href="https://wonderful-lamington-57d9aa.netlify.app/">
-							Website
-						</a>
+						<div class="work__project-links">
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project github repository" 
+								href="https://github.com/px-pole/password-generator" 
+								target="_blank">
+								Github
+							</a>
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project website" 
+								href="https://wonderful-lamington-57d9aa.netlify.app/">
+								Web page
+							</a>
+						</div>
 					</div>
 					
 					<!-- Project 5 -->
@@ -459,13 +514,15 @@
 						<p class="work__project-description2">
 							Allows to save the website url either by the input window or grabbing from the currently active tab. Introduces <strong>innerHTML, inner.value, function parameters and arguments, template strings, localStorage and JSON objects.</strong>
 						</p>
-						<a 
-							class="btn work__project-btn" 
-							aria-label="Link to my project website" 
-							href="https://github.com/px-pole/myBookmark-chrome-extension/tree/main" 
-							target="_blank">
-							Website
-						</a>
+						<div class="work__project-links">
+							<a 
+								class="btn work__project-btn github-only" 
+								aria-label="Link to my project github repository" 
+								href="https://github.com/px-pole/myBookmark-chrome-extension" 
+								target="_blank">
+								Github
+							</a>
+						</div>
 					</div>
 					
 					<!-- Project 6 -->
@@ -495,12 +552,21 @@
 						<p class="work__project-description2">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, ullam!
 						</p>
-						<a 
-							class="btn work__project-btn" 
-							aria-label="Link to my project website" 
-							href="#">
-							Website
-						</a>
+						<div class="work__project-links">
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project github repository" 
+								href="#" 
+								target="_blank">
+								Github
+							</a>
+							<a 
+								class="btn work__project-btn" 
+								aria-label="Link to my project website" 
+								href="#">
+								Web page
+							</a>
+						</div>
 					</div>
 				</div>
 				</section>
@@ -508,13 +574,44 @@
 				<section id="contact" class="contact container section">
 					<h2 class="contact__title">Get In Contact</h2>
 					<p class="contact__description">Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.</p>
-					<a 
-						class="contact__btn btn" 
-						aria-label="Send me an email button" 
-						href="mailto:karol.maciuk@gmail.com" 
-						target="_blank">
-						Reach Out
-					</a>
+					<form 
+						action="https://api.web3forms.com/submit" 
+						method="POST"
+						class="contact__container"
+						>
+						<input 
+							type="hidden" 
+							name="access_key" 
+							value="bb3d2aa3-f1a3-4f45-9369-eedc253026f9"
+						>
+						<input 
+							type="checkbox" 
+							name="botcheck" 
+							class="hidden" 
+							style="display: none;"
+						>
+						<input 
+							type="text" 
+							name="name" 
+							placeholder="Your Name" 
+							class="contact__input" 
+							required
+						/>
+						<input 
+							type="email" 
+							name="email" 
+							placeholder="Your email address" 
+							class="contact__input" 
+							required
+						/>
+						<textarea name="message" placeholder="Your message"class="contact__input contact__textarea" required></textarea>
+						<button 
+							type="submit" 
+							class="contact__submit-btn btn" 
+							aria-label="Submit the form button">
+							Submit						
+						</button>
+					</form>
 				</section>
 		</main>
     

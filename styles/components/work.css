@@ -17,7 +17,7 @@
 .work__btn {
     margin: auto;
     text-align: center;
-    font-size: var(--size-s)
+    font-size: var(--size-s);
     width: 4rem;
 }
 
@@ -112,7 +112,6 @@
 }
 
 
-/* RESPONSIVENESS */
 @media (min-width: 475px) {
     .work__img {
         --w: 28.6875rem;
@@ -146,9 +145,6 @@
 }
 
 @media (min-width: 640px) {
-    .work__btn {
-        font-size: var(--size-xs)
-    }
     .work__img {
         --w: 19.5rem;
         --h: 19.5rem;
@@ -228,8 +224,8 @@
         display: block;
         font-size: var(--size-m);
     }
-    .github-only {
-        width: 64px;
+    .work__project-links {
+        padding: 0;
     }
 }
 
@@ -252,9 +248,6 @@
     }
     .work__project-subtitle {
         font-size: var(--size-l);
-    }
-    .github-only {
-        width: 92px;
     }
 }
 
@@ -284,9 +277,6 @@
     .work__project-subtitle {
         font-size: var(--size-xl);
     }
-    .github-only {
-        width: 152px;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -315,9 +305,6 @@
     .work__container {
         width: 80%;
         margin: 0 auto;
-    }
-    .github-only {
-        width: 148px;
     }
 }
 

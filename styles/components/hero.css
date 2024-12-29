@@ -143,8 +143,6 @@
 	}
 }
 
-
-/* RESPONSIVENESS */
 @media (min-width: 475px) {
 	.hero {
 	    gap: 1.5rem;
@@ -166,7 +164,6 @@
 	    font-size: var(--size-m);
 	}
 }
-
 @media (min-width: 1024px) {
 	.hero__img {
 	    width: 8rem;
@@ -185,7 +182,6 @@
 	    font-size: var(--size-l);
 	}
 }
-
 @media (min-width: 1280px) {
 	.hero {
 	    gap: 2rem;

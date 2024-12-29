@@ -27,7 +27,7 @@
         align-items: center;
         list-style: none;
         padding: 0;
-        gap: 2em;
+        gap: 1.75em;
     }
     .header__link {
         font-size: var(--size-xs);
@@ -50,23 +50,20 @@
         width: var(--size-m);
         height: var(--size-m);
     }
-    .header__cv {
-        font-size: var(--size-xs);
+    .cv-btn {
+        display: block;
+        font-size: var(--size-xs);   
     }
     .header__bars {
         display: none;
     }
 }
-
 @media (min-width: 1024px) {
     .header__link {
-        font-size: var(--size-s);
+        font-size: var(--size-l);
     }
     .header__sun {
         width: var(--size-xl);
         height: var(--size-xl);
-    }
-    .header__cv {
-        font-size: var(--size-s);
     }
 }

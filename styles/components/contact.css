@@ -20,7 +20,7 @@
 }
 
 .contact__container {
-    border: 3px solid var(--color-slate800);
+    border: 3px solid var(--color-slate600);
     border-radius: 30px;
     padding: 1rem;
     display: flex;
@@ -48,13 +48,31 @@
 .contact__email {
     text-decoration: none;
     color: var(--color-orange);
-    font-weight: 800;
+    font-weight: 700;
     transition: 0.3s;
 }
 
 .contact__email:hover {
     font-size: 125%;
     transition: 0.3s;
+}
+
+.contact__socials {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+}
+
+.contact__socials-link {
+    font-size: var(--size-2xl);
+    color: var(--color-slate600);
+    transition: color 0.3s;
+}
+
+.contact__socials-link:hover {
+    color: var(--color-orange);
 }
 
 .cv-btn {
@@ -160,6 +178,9 @@
     .contact__email {
         font-size: var(--size-xl);
     }
+    .contact__socials-link {
+		font-size: var(--size-3xl);
+ 	}
     .cv-btn {
         margin: 0;
     }

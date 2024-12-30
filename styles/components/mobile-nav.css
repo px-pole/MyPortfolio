@@ -45,7 +45,7 @@
 }
 
 .mobile-nav__link-line {
-    border: 1px solid var(--color-slate800);
+    border: 1px solid var(--color-slate600);
     padding-right: 1.5em;
 }
 

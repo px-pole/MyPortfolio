@@ -24,19 +24,22 @@
     margin-top: 5rem;
 }
 
+.section-title-hr {
+    border-color: var(--color-slate600);
+}
+
 .btn {
     position: relative; 
     text-decoration: none;
-    display: inline-block;
     text-align: center;
     font-weight: 600;
     border-radius: 20px;
     color: var(--color-light);
     transition: .8s;
-    padding: 0.5rem 0.8rem;
+    padding: 0.4em 2em;
     background-image: linear-gradient(90deg, transparent, var(--color-orange), transparent);
     background-position: bottom;
-    background-size: 80% 10%;
+    background-size: 60% 10%;
     background-repeat: no-repeat;
 }
   

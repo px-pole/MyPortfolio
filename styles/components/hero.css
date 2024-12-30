@@ -15,7 +15,7 @@
 }
 
 .hero__subtitle {
-  	color: var(--color-slate800);
+  	color: var(--color-slate600);
   	font-size: var(--size-m);
   	line-height: 0.9;
 }
@@ -32,24 +32,6 @@
   	max-width: 60ch;
   	font-size: var(--size-s);
   	color: var(--color-slate600);
-}
-
-.hero__socials {
-  	display: flex;
-  	align-items: center;
-  	list-style: none;
-  	padding: 0;
-  	gap: 2em;
-}
-
-.hero__socials-link {
-  	font-size: var(--size-2xl);
-  	color: var(--color-slate600);
-  	transition: color 0.3s;
-}
-
-.hero__socials-link:hover {
-  	color: var(--color-orange);
 }
 
 .hero__btn,
@@ -86,7 +68,7 @@
   	left: 0;
   	right: 0;
   	bottom: 0;
-  	background: linear-gradient(45deg, transparent 3%, var(--color-indigo) 3%, var(--color-indigo) 5%, var(--color-orange) 5%);
+  	background: linear-gradient(45deg, transparent 3%, var(--color-indigo) 8%, var(--color-orange) 5%);
   	text-shadow: -3px -3px 0px var(--color-indigo), 3px 3px 0px var(--color-indigo);
   	clip-path: var(--slice-0);
 }

@@ -12,6 +12,10 @@
     text-align: center;
 }
 
+.mobile-nav.open {
+    display: flex; /* Make it visible when 'open' class is added */
+}
+
 .mobile-nav__menu {
     list-style: none;
     padding: 0;
@@ -49,7 +53,7 @@
     padding-right: 1.5em;
 }
 
-.mobile-nav__sun {
+.mobile-nav__theme-toggle {
     display: block;
     width: var(--size-xl);
     height: var(--size-xl);

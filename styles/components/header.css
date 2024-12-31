@@ -44,15 +44,70 @@
         border: 1px solid var(--color-slate600);
         padding-top: 1.5em;
     }
-    .header__sun {
+    label {
+        width: 4em;
+        height: 1.6em;
+        position: relative;
         display: block;
-        color: var(--color-slate600);
-        width: var(--size-m);
-        height: var(--size-m);
+        margin-bottom: 1.5em;
+        background: var(--color-dark);
+        border-radius: 1.6em;
+        box-shadow: inset 0px 0.04em 0.12em rgba(0, 0, 0, 0.4), inset 0px -0.04em 0.12em rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    .cv-btn {
-        display: block;
-        font-size: var(--size-xs);   
+    label:after {
+        content: '';
+        width: 1.44em;
+        height: 1.44em;
+        position: absolute;
+        top: 0.08em;
+        left: 0.08em;
+        background: linear-gradient(180deg, #777, #3a3a3a);
+        border-radius: 1.44em;
+        box-shadow: 0px 0.04em 0.08em rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease, background 0.3s ease;
+    }
+    #theme-toggle {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    #theme-toggle:checked + label {
+        background: var(--color-dark);
+    }
+    #theme-toggle:checked + label:after {
+        left: 3.92em;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg, #ffcc89, #d8860b);
+    }
+    label:hover:after {
+        width: 2.08em;
+        transition: 0.3s;
+    }
+    label svg {
+        position: absolute;
+        width: 0.96em;
+        top: 0.32em;
+        z-index: 100;
+    }
+    label svg.theme-toggle-sun {
+        left: 2.72em;
+        color: var(--color-slate600);
+        transition: 0.3s;
+    }
+    label svg.theme-toggle-moon {
+        left: 0.32em;
+        fill: transparent;
+        color: var(--color-light);
+        transition: 0.3s;
+    }
+    input:checked + label svg.theme-toggle-sun {
+        color: yellow;
+    }
+    input:checked + label svg.theme-toggle-moon {
+        fill: transparent;
+        color: var(--color-slate600);
     }
     .header__bars {
         display: none;
@@ -62,8 +117,30 @@
     .header__link {
         font-size: var(--size-l);
     }
-    .header__sun {
-        width: var(--size-xl);
-        height: var(--size-xl);
+    label {
+        width: 6em;
+        height: 2.4em;
+    }
+    label:after {
+        width: 2.16em;
+        height: 2.16em;
+        top: 0.12em;
+        left: 0.12em;
+    }
+    #theme-toggle:checked + label:after {
+        left: 5.88em;
+    }
+    label:hover:after {
+        width: 3.12em;
+    }
+    label svg {
+        width: 1.44em;
+        top: 0.48em;
+    }
+    label svg.theme-toggle-sun {
+        left: 4.08em;
+    }
+    label svg.theme-toggle-moon {
+        left: 0.48em;
     }
 }

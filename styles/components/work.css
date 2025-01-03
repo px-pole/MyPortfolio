@@ -14,6 +14,11 @@
     margin: 1rem auto;
 }
 
+.work__github-link {
+    text-decoration: none;
+    color: #4f46e5;
+}
+
 .work__btn {
     margin: auto;
     text-align: center;
@@ -30,11 +35,11 @@
     --h: 33.25rem;
     --b: 0.3rem;
     --g: 0.5rem;
-    --c: rgb(194, 65, 12);
+    --c: rgb(7, 10, 19);
 
     width: var(--w);
     height: var(--h);
-    outline: calc(var(--h)/2) solid rgba(194, 65, 12, 0.5);
+    outline: calc(var(--h)/2) solid rgba(7, 10, 19, 0.5);
     outline-offset: calc(var(--h)/-2);
     cursor: default;
     transition: .3s;
@@ -50,13 +55,13 @@
     left: 0;
     right: 0;
     bottom: calc((var(--h) - var(--w)) / 2);
-    outline: calc(var(--w)/2) solid rgba(194, 65, 12, 0.5);
+    outline: calc(var(--w)/2) solid rgba(7, 10, 19, 0.5);
     outline-offset: calc(var(--w)/-2);
     z-index: -1;
 }
 
 .work__img:hover {
-    outline: var(--b) solid var(--c);
+    outline: var(--b) solid var(--color-slate600);
     outline-offset: var(--g);
 }
 
@@ -148,8 +153,7 @@
         'content2 image2'
         'image3 content3'
         'content4 image4'
-        'image5 content5'
-        'content6 image6';
+        'image5 content5';
         place-items: center;
     }
     .work__image1 {
@@ -187,9 +191,6 @@
     }
     .work__content5 {
         grid-area: content5;
-    }
-    .work__content6 {
-        grid-area: content6;
     }
     .work__project {
         padding: 0 1rem;

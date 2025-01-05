@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Portfolio created by Karol Maciuk"/>
-		<title>Karol M</title>
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<title>Karol M - Portfolio</title>
+		<link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 		<link rel="stylesheet" href="./styles/normalize.css">
 		<link rel="stylesheet" href="./styles/style.css">
 		<link rel="stylesheet" href="./styles/components/header.css">
@@ -16,19 +16,18 @@
 		<link rel="stylesheet" href="./styles/components/footer.css">
 		<link rel="stylesheet" href="./styles/components/mobile-nav.css">
 		<link rel="stylesheet" href="./styles/utils.css">
-  	</head>
+    </head>
 
   	<body>
 		<button 
-		onclick="topFunction()" 
-		class="top-btn" 
-		aria-label="Go back to top of the page button" 
-		name="Go to top"
-		>
-		<i class='bx bxs-up-arrow' ></i>
+			onclick="topFunction()" 
+			class="top-btn" 
+			aria-label="Go back to top of the page button" 
+			name="Go to top">
+			<i class='bx bxs-up-arrow' ></i>
 		</button>
 
-    	<header class="header container">
+        <header class="header container">
 			<nav>
 				<ul class="header__menu">
 					<li>
@@ -58,24 +57,25 @@
 					<li class="header__line"></li>
 					<li>
 						<input type="checkbox" id="theme-toggle"/>
-    					<label for="theme-toggle"">
-        					<svg 
-        					    xmlns="http://www.w3.org/2000/svg" 
-								stroke="currentColor"
-        					    viewBox="0 0 24 24" 
-        					    stroke-width="1"  
-        					    class="theme-toggle-moon">
-        					    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-        					</svg>
-        					<svg 
-								xmlns="http://www.w3.org/2000/svg" 
-								viewBox="0 0 24 24" 
-								fill="currentColor"
-        					    class="theme-toggle-sun">
-								<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-							</svg>     
+    					<label for="theme-toggle">
+        				    <svg 
+        				        xmlns="http://www.w3.org/2000/svg" 
+						    	stroke="currentColor"
+        				        viewBox="0 0 24 24" 
+        				        stroke-width="1"  
+        				        class="theme-toggle-moon">
+        				        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        				    </svg>
+        				    <svg 
+						    	xmlns="http://www.w3.org/2000/svg" 
+						    	viewBox="0 0 24 24" 
+						    	fill="currentColor"
+        				        class="theme-toggle-sun">
+						    	<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+						    </svg>     
     					</label>
 					</li>
+					<li class="header__line"></li>
 					<li>
 						<a 
 							class="cv-btn" 
@@ -87,8 +87,8 @@
 					</li>
 				</ul>
 				<button 
-				class="header__bars"
-				aria-label="Access the menu button">
+					class="header__bars"
+					aria-label="Access the menu button">
 					<svg 
 						xmlns="http://www.w3.org/2000/svg" 
 						viewBox="0 0 24 24" 
@@ -129,35 +129,37 @@
 						</a>
 					</li>
 					<li class="mobile-nav__link-line"></li>
-					<ul class="mobile-nav__social-links">
-						<li>
-							<a 
-								class="mobile-nav__link" 
-								aria-label="Link to my Github profile page."
-								href="https://github.com/px-pole" 
-								target="_blank">
-								<i class='bx bxl-github'></i>
-							</a>
-						</li>
-						<li>
-							<a 
-								class="mobile-nav__link" 
-								aria-label="Link to my Twitter profile page."
-								href="https://x.com/px_pole" 
-								target="_blank">
-								<i class='bx bxl-twitter'></i>
-							</a>
-						</li>
-						<li>
-							<a 
-								class="mobile-nav__link" 
-								aria-label="Link to my Linkedin profile page."
-								href="https://www.linkedin.com/in/karol-maciuk-23a481336/" 
-								target="_blank">
-								<i class='bx bxl-linkedin'></i>
-							</a>
-						</li>
-					</ul>
+					<li>
+						<ul class="mobile-nav__social-links">
+							<li>
+								<a 
+									class="mobile-nav__link" 
+									aria-label="Link to my Github profile page."
+									href="https://github.com/px-pole" 
+									target="_blank">
+									<i class='bx bxl-github'></i>
+								</a>
+							</li>
+							<li>
+								<a 
+									class="mobile-nav__link" 
+									aria-label="Link to my Twitter profile page."
+									href="https://x.com/px_pole" 
+									target="_blank">
+									<i class='bx bxl-twitter'></i>
+								</a>
+							</li>
+							<li>
+								<a 
+									class="mobile-nav__link" 
+									aria-label="Link to my Linkedin profile page."
+									href="https://www.linkedin.com/in/karol-maciuk-23a481336/" 
+									target="_blank">
+									<i class='bx bxl-linkedin'></i>
+								</a>
+							</li>
+						</ul>
+					</li>
 					<li class="mobile-nav__link-line"></li>
 					<li>
 						<button 
@@ -166,15 +168,14 @@
 							<svg 
 								xmlns="http://www.w3.org/2000/svg" 
 								viewBox="0 0 24 24" 
-								fill="currentColor"
-							>
+								fill="currentColor">
 								<path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
 							</svg>
 						</button>
 					</li>
 					<li>
 						<a 
-							class="cv-btn" 
+							class="mobile-nav__cv-btn" 
 							aria-label="Link to my CV document." 
 							href="#"
 							target="_blank">
@@ -193,8 +194,12 @@
 					src="./images/hero.avif" 
 					alt="Profile picture"
 				/>
-				<h2 class="hero__subtitle">Hi, I'm <strong>Karol</strong> 👋</h2>
-				<h1 class="hero__title">FRONT-END <br/> WEB DEVELOPER.</h1>
+				<h2 class="hero__subtitle">
+                    Hi, I'm <strong>Karol</strong> 👋
+                </h2>
+				<h1 class="hero__title">
+                    FRONT-END <br/> WEB DEVELOPER.
+                </h1>
 				<p class="hero__description">
 					Aspiring developer creating innovative solutions for a better tomorrow.<br/>
 					<br/>"It's not a bug - it's an undocumented feature."<br/>
@@ -210,7 +215,9 @@
 
 			<section id="about" class="about container section">
 				<div class="about__content">
-					<h2 class="about__title">About</h2>
+					<h2 class="about__title">
+                        About
+                    </h2>
 					<p class="about__description">
 						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here, bringing with me a deep appreciation for hard work and growth.
 					</p>
@@ -221,25 +228,32 @@
 						When I'm not coding, you can find me immersed in video games, cheering for my favorite football team, or exploring the latest in tech trends.
 					</p>
 					<hr class="about__hr">
-					<h3 class="about__subtitle">Technologies</h3>
+					<h3 class="about__subtitle">
+                        Technologies
+                    </h3>
 					<div class="about__ul_container">
 						<ul class="about__ul">
 							<li class="about__list">
-								<i class='bx bxl-html5'></i> HTML
+								<i class='bx bxl-html5'></i> 
+                                HTML
 							</li>
 							<li class="about__list">
-								<i class='bx bxl-css3' ></i> CSS
+								<i class='bx bxl-css3' ></i> 
+                                CSS
 							</li>
 							<li class="about__list">
-								<i class='bx bxl-javascript' ></i> JavaScript
+								<i class='bx bxl-javascript' ></i> 
+                                JavaScript
 							</li>
 						</ul>
 						<ul class="about__ul">
 							<li class="about__list">
-								<i class='bx bxs-data' ></i> SQL
+								<i class='bx bxs-data' ></i> 
+                                SQL
 							</li>
 							<li class="about__list">
-								<i class='bx bxl-python' ></i> Python
+								<i class='bx bxl-python' ></i> 
+                                Python
 							</li>
 						</ul>
 					</div>
@@ -254,15 +268,19 @@
 			</section>
 
 			<section id="projects" class="work container section">
-				<h2 class="work__title">Projects</h2>
+				<h2 class="work__title">
+                    Projects
+                </h2>
 				<p class="work__description">
 					Explore my work to see how I approach challenges and turn ideas into functional and user-friendly solutions.<br/>
-					Visit my <a class="work__github-link" href="https://github.com/px-pole">Github</a> page to see more.
+					Visit my Github page to see more.
 				</p>
 				<div class="work__container">
 				  	
 					<!-- Project 1 -->
-					<h3 class="work__project-title">Amazon product clone</h3>
+					<h3 class="work__project-title">
+                        Amazon product clone
+                    </h3>
 					<div class="work__img-wrapper work__image1">
 					<img
 						src="./images/amz.avif"
@@ -271,19 +289,23 @@
 					/>
 					</div>
 					<div class="work__project work__content1">
-						<h3 class="work__project-subtitle">Amazon product clone</h3>
+						<h3 class="work__project-subtitle">
+                            Amazon product clone
+                        </h3>
 						<p>
 						  	<ul class="work__project-description1">
 								<li>
-									<i class='bx bxl-html5'></i> 72.1%
+									<i class='bx bxl-html5'></i> 
+                                    72.1%
 								</li>
 								<li>
-									<i class='bx bxl-css3'></i> 27.9%
+									<i class='bx bxl-css3'></i> 
+                                    27.9%
 								</li>
 							</ul>
 						</p>
 						<p class="work__project-description2">
-							My very first project. Simple Amazon product showcase using HTML and CSS elements like 	<strong>flexbox</strong> and custom fonts. 
+							Simple Amazon product showcase using HTML and CSS elements like <strong>flexbox</strong> and custom fonts. 
 						</p>
 						<div class="work__project-links">
 							<a 
@@ -304,7 +326,9 @@
 					</div>
 					
 					<!-- Project 2 -->
-					<h3 class="work__project-title">Basketball scoreboard</h3>
+					<h3 class="work__project-title">
+                        Basketball scoreboard
+                    </h3>
 					<div class="work__img-wrapper work__image2">
 						<img
 							src="./images/basketball.avif"
@@ -313,17 +337,22 @@
 						/>
 					</div>
 					<div class="work__project work__content2">
-						<h3 class="work__project-subtitle">Basketball scoreboard</h3>
+						<h3 class="work__project-subtitle">
+                            Basketball scoreboard
+                        </h3>
 						<p>
 							<ul class="work__project-description1">
 							  	<li>
-									<i class='bx bxl-html5'></i> 31.9%
+									<i class='bx bxl-html5'></i> 
+                                    31.9%
 								</li>
 							  	<li>
-									<i class='bx bxl-css3'></i> 43.1%
+									<i class='bx bxl-css3'></i> 
+                                    43.1%
 								</li>
 							  	<li>
-									<i class='bx bxl-javascript'></i> 25%
+									<i class='bx bxl-javascript'></i> 
+                                    25%
 								</li>
 						  </ul>
 					  	</p>
@@ -349,7 +378,9 @@
 					</div>
 					
 					<!-- Project 3 -->
-					<h3 class="work__project-title">Blackjack game</h3>
+					<h3 class="work__project-title">
+                        Blackjack game
+                    </h3>
 					<div class="work__img-wrapper work__image3">
 						<img
 							src="./images/blackjack.avif"
@@ -358,17 +389,22 @@
 						/>
 					</div>
 					<div class="work__project work__content3">
-						<h3 class="work__project-subtitle">Blackjack game</h3>
+						<h3 class="work__project-subtitle">
+                            Blackjack game
+                        </h3>
 						<p>
 							<ul class="work__project-description1">
 							  	<li>
-									<i class='bx bxl-html5'></i> 16.2%
+									<i class='bx bxl-html5'></i> 
+                                    16.2%
 								</li>
 							  	<li>
-									<i class='bx bxl-css3'></i> 18.1%
+									<i class='bx bxl-css3'></i> 
+                                    18.1%
 								</li>
 							  	<li>
-									<i class='bx bxl-javascript'></i> 65.7%
+									<i class='bx bxl-javascript'></i> 
+                                    65.7%
 								</li>
 						  </ul>
 					  	</p>
@@ -394,7 +430,9 @@
 					</div>
 					
 					<!-- Project 4 -->
-					<h3 class="work__project-title">Password generator</h3>
+					<h3 class="work__project-title">
+                        Password generator
+                    </h3>
 					<div class="work__img-wrapper work__image4">
 						<img
 							src="./images/password.avif"
@@ -403,17 +441,22 @@
 						/>
 					</div>
 					<div class="work__project work__content4">
-						<h3 class="work__project-subtitle">Password generator</h3>
+						<h3 class="work__project-subtitle">
+                            Password generator
+                        </h3>
 						<p>
 							<ul class="work__project-description1">
 								<li>
-									<i class='bx bxl-html5'></i> 18.9%
+									<i class='bx bxl-html5'></i> 
+                                    18.9%
 								</li>
 								<li>
-									<i class='bx bxl-css3'></i> 32.7%
+									<i class='bx bxl-css3'></i> 
+                                    32.7%
 								</li>
 								<li>
-									<i class='bx bxl-javascript'></i> 48.4%
+									<i class='bx bxl-javascript'></i> 
+                                    48.4%
 								</li>
 						  </ul>
 					  	</p>
@@ -439,7 +482,9 @@
 					</div>
 					
 					<!-- Project 5 -->
-					<h3 class="work__project-title">Browser extension</h3>
+					<h3 class="work__project-title">
+                        Browser extension
+                    </h3>
 					<div class="work__img-wrapper work__image5">
 						<img
 							src="./images/bookmark.avif"
@@ -448,17 +493,22 @@
 						/>
 					</div>
 					<div class="work__project work__content5">
-						<h3 class="work__project-subtitle">Browser extension</h3>
+						<h3 class="work__project-subtitle">
+                            Browser extension
+                        </h3>
 						<p>
 							<ul class="work__project-description1">
 								<li>
-									<i class='bx bxl-html5'></i> 15.6%
+									<i class='bx bxl-html5'></i> 
+                                    15.6%
 								</li>
 								<li>
-									<i class='bx bxl-css3'></i> 18.4%
+									<i class='bx bxl-css3'></i> 
+                                    18.4%
 								</li>
 								<li>
-									<i class='bx bxl-javascript'></i> 66%
+									<i class='bx bxl-javascript'></i> 
+                                    66%
 								</li>
 						  </ul>
 					  	</p>
@@ -479,17 +529,25 @@
 				</section>
 
 				<section id="contact" class="contact container section">
-					<h2 class="contact__title">Get In Contact</h2>
-					<p class="contact__description">Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.</p>
+					<h2 class="contact__title">
+                        Get In Contact
+                    </h2>
+					<p class="contact__description">
+                        Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.
+                    </p>
 					<div class="contact__container">
 						<div class="contact__container-left">
-							<h3 class="contact__container-left-title">Contact Information</h3>
-							<p class="contact__container-left-subtitle">Fill out the form and send me your message<br>or contact me directly through email or social media.</p>
+							<h3 class="contact__container-left-title">
+                                Contact Information
+                            </h3>
+							<p class="contact__container-left-subtitle">
+                                Fill out the form and send me your message<br>or contact me directly through email or social media.
+                            </p>
 							<a
 								class="contact__email" 
 								href="mailto:karol@gmail.com"
 								aria-label="Direct link to my email address">
-								karol.maciuk@gmail.com <i class='bx bx-mail-send' ></i>
+								karol.maciuk@gmail.com <i class='bx bx-mail-send'></i>
 							</a>
 							<ul class="contact__socials">
 								<li>
@@ -564,7 +622,12 @@
 									class="contact__input" 
 									required
 								/>
-								<textarea name="message" placeholder="Message"class="contact__input contact__textarea" required></textarea>
+								<textarea 
+									name="message" 
+									placeholder="Message"
+									class="contact__input contact__textarea" 
+									required>
+								</textarea>
 								<button 
 									type="submit" 
 									class="contact__submit-btn btn" 
@@ -578,7 +641,9 @@
 		</main>
     
 		<footer class="footer container section">
-			<h3 class=" footer__title">~ Karol Maciuk ~</h3>
+			<h3 class=" footer__title">
+                ~ Karol Maciuk ~
+            </h3>
 		</footer>
 		
 		<script defer src="./script.js"></script>

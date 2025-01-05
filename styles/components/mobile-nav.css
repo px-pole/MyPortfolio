@@ -23,11 +23,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .mobile-nav__link {
-    font-size: var(--size-s);
+    font-size: var(--size-xl);
     text-decoration: none;
     font-weight: 600;
     color: var(--color-slate600);
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .mobile-nav__link:hover {
@@ -55,18 +55,18 @@
 
 .mobile-nav__theme-toggle {
     display: block;
-    width: var(--size-xl);
-    height: var(--size-xl);
+    width: var(--size-2xl);
+    height: var(--size-2xl);
     color: var(--color-slate600);
 }
 
-.mobile-nav__btn {
+.mobile-nav__cv-btn {
     display: inline-block;
     font-weight: 600;
     text-decoration: none;
-    letter-spacing: -0.05em;
+    font-size: var(--size-l);
     background-color: var(--color-orange);
     color: var(--color-light);
-    padding: 0.5em 1.5em;
-    border-radius: 12px;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
 }

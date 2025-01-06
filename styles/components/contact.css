@@ -71,10 +71,6 @@
     transition: color 0.3s;
 }
 
-.contact__socials-link:hover {
-    color: var(--color-orange);
-}
-
 .cv-btn {
     padding: 0 1rem;
 }

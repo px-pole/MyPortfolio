@@ -67,6 +67,10 @@
     transition: 0.5s;
 }
 
+.social-link:hover {
+    color: var(--color-orange);
+}
+
 .top-btn {
     display: none;
     position: fixed;

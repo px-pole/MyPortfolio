@@ -82,6 +82,7 @@ body {
     font-family: 'Poppins-Regular', 'Poppins-Medium', 'Poppins-SemiBold', 'Poppins-Bold', sans-serif;
     background-color: var(--color-dark);
     color: var(--color-light);
+    transition: background-color 1s ease;
 }
 
 img,

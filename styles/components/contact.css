@@ -68,11 +68,12 @@
 .contact__socials-link {
     font-size: var(--size-2xl);
     color: var(--color-slate600);
-    transition: color 0.3s;
+    transition: 0.5s ease;
 }
 
 .cv-btn {
     padding: 0 1rem;
+    transition: 0.5s ease;
 }
 
 .contact__container-form {

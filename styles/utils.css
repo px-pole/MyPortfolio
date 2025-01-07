@@ -90,7 +90,54 @@
     background-color: transparent;
     transition: 0.5s;
 }
+
+.autoShow {
+    animation: both autoShowAnimation;
+    animation-timeline: view(80% 5%);
+}
   
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.autoShowLeft {
+    animation: both autoShowAnimationLeft;
+    animation-timeline: view(80% 5%);
+}
+
+@keyframes autoShowAnimationLeft {
+    from {
+        opacity: 0;
+        transform: translateX(200%) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.autoShowRight {
+    animation: both autoShowAnimationRight;
+    animation-timeline: view(80% 5%);
+}
+
+@keyframes autoShowAnimationRight {
+    from {
+        opacity: 0;
+        transform: translateX(-200%) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
 
 @media (min-width: 475px) {
     .container {

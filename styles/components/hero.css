@@ -31,7 +31,7 @@
 @keyframes textAnimation {
 	0% {
 		stroke-dashoffset: 300;
-	} 30% {
+	} 50% {
 		fill: transparent;
 	} 100% {
 		stroke-dashoffset: 0;
@@ -140,7 +140,7 @@
 
 @media (min-width: 475px) {
 	.hero {
-	    gap: 1.5rem;
+	    gap: 1rem;
 	}
 	.hero__img {
 	    width: 6.5rem;

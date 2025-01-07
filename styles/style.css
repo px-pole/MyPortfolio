@@ -25,27 +25,40 @@
 }
 
 @font-face {
-    font-family: 'General Sans';
-    src: url(./components/fonts/GeneralSans-Regular.otf);
+    font-family: 'Poppins-Regular';
+    src: url('./components/fonts/Poppins-Regular.woff2') format('woff2'),
+         url('./components/fonts/Poppins-Regular.woff') format('woff'),
+         url('./components/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
+    font-display: swap;
+    font-style: normal;
 }
-
 @font-face {
-    font-family: 'General Sans';
-    src: url(./components/fonts/GeneralSans-Medium.otf);
+    font-family: 'Poppins-Medium';
+    src: url('./components/fonts/Medium.woff2') format('woff2'),
+         url('./components/fonts/Medium.woff') format('woff'),
+         url('./components/fonts/Medium.ttf') format('truetype');
     font-weight: 500;
+    font-display: swap;
+    font-style: normal;
 }
-
 @font-face {
-    font-family: 'General Sans';
-    src: url(./components/fonts/GeneralSans-Semibold.otf);
+    font-family: 'Poppins-SemiBold';
+    src: url('./components/fonts/SemiBold.woff2') format('woff2'),
+         url('./components/fonts/SemiBold.woff') format('woff'),
+         url('./components/fonts/SemiBold.ttf') format('truetype');
     font-weight: 600;
+    font-display: swap;
+    font-style: normal;
 }
-
 @font-face {
-    font-family: 'General Sans';
-    src: url(./components/fonts/GeneralSans-Bold.otf);
+    font-family: 'Poppins-Bold';
+    src: url('./components/fonts/Bold.woff2') format('woff2'),
+         url('./components/fonts/Bold.woff') format('woff'),
+         url('./components/fonts/Bold.ttf') format('truetype');
     font-weight: 700;
+    font-display: swap;
+    font-style: normal;
 }
 
 * {
@@ -66,7 +79,7 @@ html {
 }
 
 body {
-    font-family: 'General Sans', sans-serif;
+    font-family: 'Poppins-Regular', 'Poppins-Medium', 'Poppins-SemiBold', 'Poppins-Bold', sans-serif;
     background-color: var(--color-dark);
     color: var(--color-light);
 }

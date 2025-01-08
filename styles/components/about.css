@@ -74,7 +74,6 @@
         font-size: var(--size-m);
     }
 }
-
 @media (min-width: 640px) {
     .about__img-wrapper {
         margin-left: auto;
@@ -84,7 +83,6 @@
         width: 28.6875rem;
     }
 }
-
 @media (min-width: 1024px) {
     .about {
         flex-direction: row;
@@ -104,7 +102,6 @@
         font-size: var(--size-l);
     }
 }
-
 @media (min-width: 1280px) {
     .about {
         gap: 2rem;

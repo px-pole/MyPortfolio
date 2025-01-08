@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const phrases = [
             "Hi, I'm Karol", 
             "Cześć, jestem Karol", 
-            "Hola soy Karol", 
+            "こんにちは、カロルです",
+            "Hola yo soy Karol", 
             "Salut, je suis Karol", 
             "你好，我是 Karol", 
-            "こんにちは、カロルです",
-            "Olá, eu sou Karol" 
+            "Olá, eu sou o Karol" 
         ];
         // Index to keep track of which phrase in the array is currently being displayed
         let phraseIndex = 0;
@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(type, 1000);
             }
         };
-
         type();
     };
 

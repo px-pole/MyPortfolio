@@ -1,17 +1,3 @@
-/* extra small */
-/* @media (min-width: 475px) {} */
-/* small */
-/* @media (min-width: 640px) {} */
-/* medium */
-/* @media (min-width: 768px) {} */
-/* large */
-/* @media (min-width: 1024px) {} */
-/* extra large */
-/* @media (min-width: 1280px) {} */
-/* 2XL */
-/* @media (min-width: 1536px) {} */
-
-
 .container {
     width: 100%;
     margin-left: auto;
@@ -126,9 +112,6 @@
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
-    }
-    .section {
-        margin-top: 10rem;
     }
 }
 @media (min-width: 1280px) {

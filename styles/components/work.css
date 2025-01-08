@@ -139,7 +139,6 @@
         font-size: var(--size-m);
     }
 }
-
 @media (min-width: 640px) {
     .work__img {
         --w: 19.5rem;
@@ -220,7 +219,6 @@
         padding: 0;
     }
 }
-
 @media (min-width: 768px) {
     .work__btn {
         font-size: var(--size-l)
@@ -242,7 +240,6 @@
         font-size: var(--size-l);
     }
 }
-
 @media (min-width: 1024px) {
     .work__btn {
         font-size: var(--size-m)
@@ -270,7 +267,6 @@
         font-size: var(--size-xl);
     }
 }
-
 @media (min-width: 1280px) {
     .work__title {
         font-size: var(--size-5xl);
@@ -299,7 +295,6 @@
         margin: 0 auto;
     }
 }
-
 @media (min-width: 1536px) {
     .work__container {
         width: 70%;

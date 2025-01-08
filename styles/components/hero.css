@@ -113,7 +113,6 @@
 }
 
 
-
 @keyframes glitch {
 	0% {
 	   clip-path: var(--slice-1);
@@ -176,7 +175,7 @@
 	    font-size: var(--size-m);
 	}
 }
-@media (min-width:768px) {
+@media (min-width: 768px) {
 	.hero__social-links {
 		display: flex;
 		gap: 1rem;

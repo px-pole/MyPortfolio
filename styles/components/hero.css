@@ -22,7 +22,7 @@
 
 .hero__subtitle span::before {
   	content: "";
-	right: 20px;
+	right: 5px;
 	top: 50%;
 	position: absolute;
 	height: 1.2rem;
@@ -203,7 +203,7 @@
 	}
 	.hero__subtitle span::before {
 	    height: 1.7rem;
-		right: 35px;
+		right: 8px;
 	}
 	.hero__description {
 	    font-size: var(--size-l);
@@ -229,7 +229,7 @@
 	}
 	.hero__subtitle span::before {
 	    height: 2.5rem;
-		right: 52px;
+		right: 15px;
 	}
 	.hero__description {
 	    font-size: var(--size-xl);

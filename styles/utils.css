@@ -77,6 +77,11 @@
     transition: 0.5s;
 }
 
+.hidden {
+    display: inline-block;
+    color: transparent;
+}
+
 .autoShow {
     animation: both autoShowAnimation;
     animation-timeline: view(80% 5%);

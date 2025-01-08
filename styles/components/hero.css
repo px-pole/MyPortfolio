@@ -17,6 +17,29 @@
   	color: var(--color-slate600);
   	font-size: var(--size-m);
   	line-height: 0.9;
+	position: relative;
+}
+
+.hero__subtitle span::before {
+  	content: "";
+	right: 20px;
+	top: 50%;
+	position: absolute;
+	height: 1.2rem;
+	width: 2px;
+	background: #475569;
+	transform: translateY(-50%);
+	animation: blinking 0.7s infinite;
+}
+
+.hero__subtitle span.blink::before {
+  	animation: none;
+}
+
+@keyframes blinking {
+	50% {
+		opacity: 0;
+	}
 }
 
 .hero__title path {
@@ -179,6 +202,10 @@
 	.hero__subtitle {
 	    font-size: var(--size-2xl);
 	}
+	.hero__subtitle span::before {
+	    height: 1.7rem;
+		right: 35px;
+	}
 	.hero__description {
 	    font-size: var(--size-l);
 	}
@@ -200,6 +227,10 @@
 	}
 	.hero__subtitle {
 	    font-size: var(--size-4xl);
+	}
+	.hero__subtitle span::before {
+	    height: 2.5rem;
+		right: 52px;
 	}
 	.hero__description {
 	    font-size: var(--size-xl);

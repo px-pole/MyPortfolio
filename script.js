@@ -90,8 +90,75 @@ document.addEventListener('DOMContentLoaded', () => {
         topButton.addEventListener('click', topFunction);
     };
 
+    // Function to create a typing effect for text on a webpage
+    const typeEffect = () => {
+        // Selects the <span> element inside the <h2> where the text will be displayed
+        const dynamicText = document.querySelector('h2 span');
+        // Array of phrases that will be typed out dynamically
+        const phrases = [
+            "Hi, I'm Karol", 
+            "Cześć, jestem Karol", 
+            "Hola soy Karol", 
+            "Salut, je suis Karol", 
+            "你好，我是 Karol", 
+            "こんにちは、カロルです",
+            "Olá, eu sou Karol" 
+        ];
+        // Index to keep track of which phrase in the array is currently being displayed
+        let phraseIndex = 0;
+        // Index to keep track of the character position in the current phrase
+        let charIndex = 0;
+        // Flag to indicate whether characters are being deleted (true) or typed (false)
+        let isDeleting = false;
+
+        // Inner function that handles the typing and deleting of characters
+        const type = () => {
+            // Get the current phrase from the array using phraseIndex
+            const currentPhrase = phrases[phraseIndex];
+            // Get a substring of the current phrase, up to the current character index
+            const currentChar = currentPhrase.substring(0, charIndex);
+
+            // Update the <span> element's text with the current characters
+            dynamicText.textContent = currentChar;
+            // Add a "blinking" effect class to the text (defined in CSS)
+            dynamicText.classList.add('blink');
+
+            // If not deleting and there are more characters to type in the current phrase
+            if (!isDeleting && charIndex < currentPhrase.length) {
+                charIndex++; // Move to the next character
+                setTimeout(type, 100); // Wait 100ms before typing the next character
+            } 
+            // If deleting and there are still characters left to delete
+            else if (isDeleting && charIndex > 0) {
+                charIndex--; // Move backwards, deleting a character
+                setTimeout(type, 50); // Wait 50ms before deleting the next character
+            } 
+            // If finished typing or deleting the current word
+            else {
+                // Toggle the isDeleting flag (start deleting if typing is done, or vice versa)
+                isDeleting = !isDeleting;
+                // Remove the "blinking" effect (for better UX)
+                dynamicText.classList.remove('blink');
+
+                // If starting to type a new word
+                if (!isDeleting) {
+                    // Move to the next word in the array (loop back to the start if at the end)
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+
+                // Wait 1000ms (1 second) before typing/deleting the next word
+                setTimeout(type, 1000);
+            }
+        };
+
+        type();
+    };
+
+
+
     // Initialize all the handlers when the page is ready
     mobileNavHandler();
     darkModeHandler();
     backToTopHandler();
+    typeEffect();
 });

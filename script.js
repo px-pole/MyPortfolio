@@ -96,16 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const dynamicText = document.querySelector('h2 span');
         // Array of phrases that will be typed out dynamically
         const phrases = [
-            "Hi, I'm Karol",               // English
-            "Cześć, jestem Karol",        // Polish
-            "안녕하세요, 저는 카롤입니다", // Korean
-            "Hola yo soy Karol",        // Spanish
-            "こんにちは私はカロルです",  // Japanese
-            "Salut, je suis Karol",   // French
-            "Olá, eu sou o Karol",   // Portuguese
-            "您好，很高兴见到你",     // Chinese
-            "Hej, jag är Karol"    // Swedish
+            "Hi, I'm Karol",             // English
+            "Cześć, jestem Karol",      // Polish
+            "Hola yo soy Karol",       // Spanish
+            "こんにちは私はカロルです", // Japanese
+            "Salut, je suis Karol",  // French
+            "Olá, eu sou o Karol",  // Portuguese
+            "您好，很高兴见到你",    // Chinese
+            "Hej, jag är Karol"   // Swedish
         ];
+        
         // Index to keep track of which phrase in the array is currently being displayed
         let phraseIndex = 0;
         // Index to keep track of the character position in the current phrase

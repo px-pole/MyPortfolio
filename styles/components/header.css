@@ -29,6 +29,7 @@
         list-style: none;
         padding: 0;
         gap: 1.75em;
+        padding-right: 1rem;
     }
     .header__link {
         font-size: var(--size-xs);

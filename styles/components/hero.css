@@ -15,9 +15,11 @@
 
 .hero__subtitle {
   	color: var(--color-slate600);
-  	font-size: var(--size-m);
+  	font-size: var(--size-xl);
   	line-height: 0.9;
 	position: relative;
+	padding: 0;
+	margin: 0;
 }
 
 .hero__subtitle span::before {
@@ -49,6 +51,8 @@
 	stroke-dasharray: 300;
 	stroke-dashoffset: 300;
 	animation: textAnimation 3.5s ease-in-out 1 forwards;
+	padding: 0;
+	margin: 0;
 }
 
 @keyframes textAnimation {

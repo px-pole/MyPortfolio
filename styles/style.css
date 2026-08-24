@@ -1,39 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-.poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.poppins-medium {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-.poppins-semibold {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-.poppins-extrabold {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --color-dark: #070a13;      /* rgb(7, 10, 19) */
-    --color-light: #f1f5f9;     /* rgb(241, 245, 249) */
-    --color-slate400: #94a3b8;  /* rgb(148, 163, 184) */
-    --color-slate600: #475569;  /* rgb(71, 85, 105) */
-    --color-slate800: #1e293b;  /* rgb(30, 41, 59) */
-    --color-orange: #c2410c;    /* rgb(194, 65, 12) */
-    --color-indigo: #4f46e5;    /* rgb(79, 70, 229) */
+    --color-dark: #0b0d10;
+    --color-light: #f4f4f0;
+    --color-slate400: #a9b0ba;
+    --color-slate600: #7a838f;
+    --color-slate800: #252a31;
+    --color-orange: #ff6b35;
+    --color-indigo: #30c5b5;
 
     --size-xxs: 0.5rem;
     --size-xs: 0.75rem;
@@ -54,6 +28,7 @@
 
 * {
     margin: 0;
+    box-sizing: border-box;
     line-height: calc(1em + 0.5rem);
 }
 
@@ -63,18 +38,29 @@ html {
 }
 
 .light-mode {
-    --color-light: #070a13;
-    --color-dark: #f1f5f9;
-    --color-slate400: #1e293b;
-    --color-slate600: #1e293b;
-    --color-slate800: #1e293b;
+    --color-light: #101216;
+    --color-dark: #f6f6f2;
+    --color-slate400: #414852;
+    --color-slate600: #606873;
+    --color-slate800: #d9dde1;
 }
 
 body {
-    font-family: "Poppins", serif;
+    font-family: "Manrope", sans-serif;
     background-color: var(--color-dark);
+    background-image:
+        linear-gradient(rgba(122, 131, 143, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(122, 131, 143, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
     color: var(--color-light);
     transition: background-color 1s ease;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 0;
 }
 
 img,
@@ -85,7 +71,6 @@ svg {
     display: block;
     max-width: 100%;
     user-select: none;
-    aspect-ratio: 1 / 1;
 }
 
 button {

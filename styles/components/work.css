@@ -1,5 +1,5 @@
 .work {
-    text-align: center;
+    text-align: left;
 }
 
 .work__title {
@@ -11,7 +11,7 @@
     max-width: 60ch;
     font-size: var(--size-s);
     color: var(--color-slate600);
-    margin: 1rem auto;
+    margin: 1rem 0 2rem;
 }
 
 .work__github-link {
@@ -31,45 +31,18 @@
 }
 
 .work__img {
-    --w: 32rem;
-    --h: 32rem;
-    --b: 0.2em;
-    --g: 0.5rem;
-    --c: rgb(7, 10, 19);
-
-    width: var(--w);
-    height: var(--h);
-    outline: calc(var(--h)/2) solid rgba(7, 10, 19, 0.5);
-    outline-offset: calc(var(--h)/-2);
-    cursor: default;
-    transition: .3s;
-    border-radius: 10%;
-    margin-bottom: 5px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.work__img::before {
-    content: '';
-    position: absolute;
-    top: calc((var(--h) - var(--w)) / 2);
-    left: 0;
-    right: 0;
-    bottom: calc((var(--h) - var(--w)) / 2);
-    outline: calc(var(--w)/2) solid rgba(7, 10, 19, 0.5);
-    outline-offset: calc(var(--w)/-2);
-    z-index: -1;
+    width: min(100%, 32rem);
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border: 1px solid var(--color-slate800);
+    border-radius: 8px;
+    margin: 0;
+    transition: border-color 0.3s, transform 0.3s;
 }
 
 .work__img:hover {
-    outline: var(--b) solid var(--color-slate600);
-    outline-offset: var(--g);
-}
-
-.work__img:hover::before {
-    outline: var(--b) solid var(--c);
-    outline-offset: var(--g);
+    border-color: var(--color-slate600);
+    transform: translateY(-4px);
 }
 
 .work__project:not(:last-child) {
@@ -82,7 +55,7 @@
     margin: 1rem 0;
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     padding-left: 0;
@@ -91,12 +64,12 @@
 .work__project-description2 {
     font-size: var(--size-s);
     color: var(--color-slate400);
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 .work__project-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     padding: 0 3rem;
 }
@@ -111,10 +84,6 @@
 
 
 @media (min-width: 475px) {
-    .work__img {
-        --w: 28rem;
-        --h: 28rem;
-    }
     .work__title {
         font-size: var(--size-3xl);
     }
@@ -142,20 +111,15 @@
     }
 }
 @media (min-width: 640px) {
-    .work__img {
-        --w: 19rem;
-        --h: 19rem;
-    }
     .work__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         'image1 content1'
         'content2 image2'
-        'image3 content3'
-        'content4 image4'
-        'image5 content5';
+        'image3 content3';
         place-items: center;
+        gap: 0 4rem;
     }
     .work__image1 {
         grid-area: image1;
@@ -166,18 +130,6 @@
     .work__image3 {
         grid-area: image3;
     }
-    .work__image4 {
-        grid-area: image4;
-    }
-    .work__image4 {
-        grid-area: image4;
-    }
-    .work__image5 {
-        grid-area: image5;
-    }
-    .work__image6 {
-        grid-area: image6;
-    }
     .work__content1 {
         grid-area: content1;
     }
@@ -187,14 +139,22 @@
     .work__content3 {
         grid-area: content3;
     }
-    .work__content4 {
-        grid-area: content4;
-    }
-    .work__content5 {
-        grid-area: content5;
-    }
     .work__project {
-        padding: 0 1rem;
+        width: 100%;
+        min-height: 100%;
+        padding: 3rem 1rem;
+        border-top: 1px solid var(--color-slate800);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .work__img-wrapper {
+        width: 100%;
+        min-height: 100%;
+        padding: 3rem 0;
+        border-top: 1px solid var(--color-slate800);
+        display: flex;
+        align-items: center;
     }
     .work__project-title {
         display: none;
@@ -225,10 +185,6 @@
     .work__btn {
         font-size: var(--size-l)
     }
-    .work__img {
-        --w: 23rem;
-        --h: 23rem;
-    }
     .work__project-description1 {
         font-size: var(--size-s);
     }
@@ -245,10 +201,6 @@
 @media (min-width: 1024px) {
     .work__btn {
         font-size: var(--size-m)
-    }
-    .work__img {
-        --w: 31rem;
-        --h: 31rem;
     }
     .work__title {
         font-size: var(--size-4xl);
@@ -275,7 +227,7 @@
     }
     .work__description {
         font-size: var(--size-xl);
-        margin: 2rem auto;
+        margin: 1.5rem 0 2.5rem;
     }
     .work__btn {
         font-size: var(--size-l)

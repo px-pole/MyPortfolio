@@ -246,3 +246,103 @@
 		font-size: var(--size-3xl);
 	}
 }
+
+/* Current hero presentation */
+.hero {
+	min-height: calc(100svh - 7rem);
+	text-align: left;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.hero__img {
+	width: 4.5rem;
+	height: 4.5rem;
+	object-fit: cover;
+	border: 2px solid var(--color-orange);
+}
+
+.hero__subtitle {
+	color: var(--color-indigo);
+	font-family: "Manrope", sans-serif;
+	font-size: var(--size-xs);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.hero__subtitle span::before,
+.hero__title {
+	display: none;
+}
+
+.hero__heading {
+	font-size: var(--size-5xl);
+	line-height: 0.95;
+	max-width: 10ch;
+}
+
+.hero__title-text {
+	display: block;
+	color: var(--color-light);
+}
+
+.hero__title-text strong {
+	color: var(--color-orange);
+	font-weight: 700;
+}
+
+.hero__description {
+	max-width: 56ch;
+	color: var(--color-slate400);
+}
+
+.hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.hero__btn {
+	padding: 0.4em 1.25em;
+	background: var(--color-orange);
+	border-radius: 4px;
+}
+
+.hero__btn::after {
+	display: none;
+}
+
+.hero__text-link {
+	color: var(--color-light);
+	font-size: var(--size-s);
+	font-weight: 700;
+	text-decoration-color: var(--color-indigo);
+	text-underline-offset: 0.35rem;
+}
+
+@media (min-width: 475px) {
+	.hero__heading {
+		font-size: var(--size-6xl);
+	}
+}
+
+@media (min-width: 1024px) {
+	.hero {
+		gap: 1.5rem;
+		margin-top: 0;
+	}
+
+	.hero__img {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.hero__subtitle {
+		font-size: var(--size-s);
+	}
+
+	.hero__heading {
+		font-size: var(--size-8xl);
+	}
+}

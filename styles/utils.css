@@ -2,12 +2,12 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .section {
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .section-title-hr {
@@ -19,19 +19,18 @@
     text-decoration: none;
     text-align: center;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 4px;
     color: var(--color-light);
-    transition: .8s;
-    padding: 0.4em 2em;
-    background-image: linear-gradient(90deg, transparent, var(--color-orange), transparent);
-    background-position: bottom;
-    background-size: 60% 10%;
-    background-repeat: no-repeat;
+    border: 1px solid var(--color-slate600);
+    transition: 0.25s;
+    padding: 0.65em 1.25em;
 }
   
 .btn:hover {
-    color: var(--color-light) ;
-    box-shadow: 0 0 5px var(--color-light) ;
+    color: var(--color-dark);
+    border-color: var(--color-indigo);
+    background-color: var(--color-indigo);
+    box-shadow: none;
 }
 
 .cv-btn {
@@ -41,7 +40,7 @@
     font-weight: 600;
     font-size: var(--size-s);
     color: var(--color-light);
-    border-radius: 20px;
+    border-radius: 4px;
     background-color: var(--color-orange);
     border: 2px solid var(--color-orange);
     padding: 0.2rem 2rem;
@@ -90,11 +89,29 @@
 @keyframes autoShowAnimation {
     from {
         opacity: 0;
-        transform: translateY(50px) scale(0.3);
+        transform: translateY(24px);
     }
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .autoShow {
+        animation: none;
     }
 }
 

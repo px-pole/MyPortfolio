@@ -8,22 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerBtn = document.querySelector('.header__bars');
         // Select the mobile navigation menu itself
         const mobileNav = document.querySelector('.mobile-nav');
+
+        const setMenuOpen = (isOpen) => {
+            mobileNav.classList.toggle('open', isOpen);
+            headerBtn.setAttribute('aria-expanded', String(isOpen));
+            headerBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
+        };
         
         // When the menu button is clicked, toggle the 'open' class to show or hide the menu
         headerBtn.addEventListener('click', () => {
-            const isOpen = mobileNav.classList.toggle('open');
-            // Prevent body scrolling when the menu is open
-            document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
+            setMenuOpen(!mobileNav.classList.contains('open'));
         });
 
         // When a link inside the mobile menu is clicked, close the menu
         mobileNav.addEventListener('click', (e) => {
-            // Check if the clicked element has the class 'mobile-nav__link'
-            if (e.target.classList.contains('mobile-nav__link')) {
-                // Remove the 'open' class to close the menu
-                mobileNav.classList.remove('open');
-                // Allow scrolling again after the menu is closed
-                document.body.style.overflowY = 'auto';
+            if (e.target.closest('a')) {
+                setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+                setMenuOpen(false);
+                headerBtn.focus();
             }
         });
     };
@@ -88,6 +96,41 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', scrollFunction);
         // Listen for the click event on the 'Back to Top' button and run the topFunction
         topButton.addEventListener('click', topFunction);
+    };
+
+    const contactFormHandler = () => {
+        const form = document.querySelector('#contact-form');
+        const status = document.querySelector('#contact-form-status');
+        const submitButton = form?.querySelector('[type="submit"]');
+        if (!form || !status || !submitButton) return;
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            status.textContent = '';
+            status.removeAttribute('data-state');
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: { Accept: 'application/json' },
+                });
+
+                if (!response.ok) throw new Error('Formspree rejected the submission');
+
+                form.reset();
+                status.textContent = 'Thanks, your message has been sent.';
+                status.dataset.state = 'success';
+            } catch (error) {
+                status.textContent = 'Your message could not be sent. Please check your connection and try again.';
+                status.dataset.state = 'error';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
     };
 
     // Function to create a typing effect for text on a webpage
@@ -161,5 +204,5 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavHandler();
     darkModeHandler();
     backToTopHandler();
-    typeEffect();
+    contactFormHandler();
 });

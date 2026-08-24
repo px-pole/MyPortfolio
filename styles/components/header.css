@@ -1,11 +1,39 @@
 .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    position: relative;
+    min-height: 4.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    position: sticky;
+    top: 0;
     z-index: 9999;
+    background-color: rgba(11, 13, 16, 0.86);
+    border-bottom: 1px solid var(--color-slate800);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__brand {
+    color: var(--color-light);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: var(--size-2xl);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header__brand span {
+    color: var(--color-orange);
+}
+
+.light-mode .header {
+    background-color: rgba(246, 246, 242, 0.88);
 }
 
 .header__menu {
@@ -17,7 +45,7 @@
     width: var(--size-3xl);
     height: var(--size-3xl);
     display: block;
-    margin-right: 2rem;
+    margin-left: auto;
 }
 
 
@@ -29,24 +57,29 @@
         list-style: none;
         padding: 0;
         gap: 1.75em;
-        padding-right: 1rem;
+        margin-left: auto;
+    }
+    .header__menu > li {
+        display: flex;
+        align-items: center;
     }
     .header__link {
         font-size: var(--size-xs);
         text-decoration: none;
         font-weight: 600;
         color: var(--color-slate600);
-        letter-spacing: -0.05em;
+        letter-spacing: 0;
         transition: color 0.3s;
     }
     .header__link:hover {
         color: var(--color-orange);
     }
     .header__line {
-        border: 1px solid var(--color-slate600);
-        padding-top: 1.5em;
+        width: 1px;
+        height: 1.5rem;
+        border-left: 1px solid var(--color-slate600);
     }
-    label {
+    label[for="theme-toggle"] {
         width: 4em;
         height: 1.6em;
         position: relative;
@@ -58,7 +91,7 @@
         cursor: pointer;
         transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    label:after {
+    label[for="theme-toggle"]:after {
         content: '';
         width: 1.44em;
         height: 1.44em;
@@ -83,22 +116,22 @@
         transform: translateX(-100%);
         background: linear-gradient(180deg, #ffcc89, #d8860b);
     }
-    label:hover:after {
+    label[for="theme-toggle"]:hover:after {
         width: 2.08em;
         transition: 0.3s;
     }
-    label svg {
+    label[for="theme-toggle"] svg {
         position: absolute;
         width: 0.96em;
         top: 0.32em;
         z-index: 100;
     }
-    label svg.theme-toggle-sun {
+    label[for="theme-toggle"] svg.theme-toggle-sun {
         left: 2.72em;
         color: var(--color-slate600);
         transition: 0.3s;
     }
-    label svg.theme-toggle-moon {
+    label[for="theme-toggle"] svg.theme-toggle-moon {
         left: 0.32em;
         fill: transparent;
         color: var(--color-light);
@@ -115,34 +148,44 @@
         display: none;
     }
 }
+
+@media (min-width: 768px) {
+    label[for="theme-toggle"] {
+        width: 3.5rem;
+        height: 1.75rem;
+        margin-bottom: 0;
+    }
+
+    label[for="theme-toggle"]:after {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 0.125rem;
+        left: 0.125rem;
+    }
+
+    #theme-toggle:checked + label:after {
+        left: 3.375rem;
+    }
+
+    label[for="theme-toggle"]:hover:after {
+        width: 1.5rem;
+    }
+
+    label[for="theme-toggle"] svg {
+        width: 1rem;
+        top: 0.375rem;
+    }
+
+    label[for="theme-toggle"] svg.theme-toggle-sun {
+        left: 2.25rem;
+    }
+
+    label[for="theme-toggle"] svg.theme-toggle-moon {
+        left: 0.375rem;
+    }
+}
 @media (min-width: 1024px) {
     .header__link {
         font-size: var(--size-l);
-    }
-    label {
-        width: 6em;
-        height: 2.4em;
-    }
-    label:after {
-        width: 2.16em;
-        height: 2.16em;
-        top: 0.12em;
-        left: 0.12em;
-    }
-    #theme-toggle:checked + label:after {
-        left: 5.88em;
-    }
-    label:hover:after {
-        width: 3.12em;
-    }
-    label svg {
-        width: 1.44em;
-        top: 0.48em;
-    }
-    label svg.theme-toggle-sun {
-        left: 4.08em;
-    }
-    label svg.theme-toggle-moon {
-        left: 0.48em;
     }
 }

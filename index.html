@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Portfolio created by Karol Maciuk"/>
+		<meta name="description" content="Karol Maciuk is a frontend developer in Leeds building accessible web applications with JavaScript, HTML, and CSS."/>
 		<title>Karol Maciuk - Portfolio</title>
 		<link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 		<link rel="stylesheet" href="./styles/normalize.css">
@@ -22,7 +22,6 @@
 
   	<body>
 		<button 
-			onclick="topFunction()" 
 			class="top-btn" 
 			aria-label="Go back to top of the page button" 
 			name="Go to top">
@@ -31,6 +30,7 @@
 
         <header class="header container">
 			<nav>
+				<a class="header__brand" href="#" aria-label="Karol Maciuk, back to top">KM<span>.</span></a>
 				<ul class="header__menu">
 					<li>
 						<a 
@@ -90,7 +90,9 @@
 				</ul>
 				<button 
 					class="header__bars"
-					aria-label="Access the menu button">
+					aria-label="Open navigation menu"
+					aria-controls="mobile-navigation"
+					aria-expanded="false">
 					<svg 
 						xmlns="http://www.w3.org/2000/svg" 
 						viewBox="0 0 24 24" 
@@ -103,7 +105,7 @@
 		</header>
 
 		<!-- Mobile Navigation -->
-		<div class="mobile-nav">
+		<div id="mobile-navigation" class="mobile-nav">
 			<nav>
 				<ul class="mobile-nav__menu">
 					<li>
@@ -194,14 +196,17 @@
 				<img 
 					class="hero__img" 
 					src="./images/hero.avif" 
-					alt="Profile picture"
+					alt="Karol Maciuk"
 				/>
 				<h2 class="hero__subtitle">
-                    <span></span> <div class="hidden">|</div>
+					<span>Karol Maciuk · Leeds, UK</span>
                 </h2>
-				<h1>
+				<h1 class="hero__heading">
+					<span class="hero__title-text">Frontend<br><strong>developer.</strong></span>
                     <svg 
 						class="hero__title"
+						aria-hidden="true"
+						focusable="false"
 						width="800"
 						height="160" 
 						viewBox="0 0 374 81" 
@@ -211,16 +216,12 @@
 					</svg>
                 </h1>
 				<p class="hero__description">
-					Aspiring developer creating innovative solutions for a better tomorrow.<br/>
-					<br/>"It's not a bug - it's an undocumented feature."<br/>
-					- Anonymous
-				</p>								
-				<a 
-					class="hero__btn" 
-					aria-label="Go to contact section" 
-					href="#contact">
-					Contact Me
-				</a>
+					I build accessible, responsive web experiences with thoughtful interactions and clean JavaScript. My latest project, WatchaScore, brings broadcast-ready football scoring to the browser.
+				</p>
+				<div class="hero__actions">
+					<a class="hero__btn" href="#projects">View Projects</a>
+					<a class="hero__text-link" href="#contact">Let's work together <span aria-hidden="true">→</span></a>
+				</div>
 				<ul class="hero__social-links">
 					<li>
 						<a 
@@ -258,16 +259,16 @@
                         About
                     </h2>
 					<p class="about__description autoShow">
-						Hi, I'm Karol, and I'm an aspiring <strong>Frontend Web Developer</strong> based in Leeds, UK. Originally from a small village in Poland, I moved here, bringing with me a deep appreciation for hard work and growth.
+						I'm Karol, a <strong>Frontend Web Developer</strong> based in Leeds, UK. I build practical interfaces that balance clear design, accessibility, and maintainable code.
 					</p>
 					<p class="about__description autoShow">
-						I love discovering new things and watching my creations evolve as I work on them. I'm always <strong>eager to learn and create</strong>—whether it's in my professional journey or personal pursuits
+						I enjoy taking a product from a rough idea to a polished experience, learning what the problem needs and refining the details as it develops.
 					</p>
 					<p class="about__description autoShow">
-						When I'm not coding, you can find me immersed in video games, cheering for my favorite football team, or exploring the latest in tech trends.
+						Away from the editor, I'm usually playing video games, following football, or exploring new technology.
 					</p>
 					<hr class="about__hr">
-					<h3 class="about__subtitleautoShow">
+					<h3 class="about__subtitle autoShow">
                         Technologies
                     </h3>
 					<div class="about__ul_container">
@@ -311,54 +312,48 @@
                     Projects
                 </h2>
 				<p class="work__description autoShow">
-					Explore my work to see how I approach challenges and turn ideas into functional and user-friendly solutions.<br/>
-					Visit my Github page to see more.
+					Explore selected projects that show how I turn ideas into functional, user-friendly solutions.
 				</p>
 				<div class="work__container">
 				  	
 					<!-- Project 1 -->
 					<h3 class="work__project-title autoShow">
-                        Amazon product clone
+						WatchaScore
                     </h3>
 					<div class="work__img-wrapper work__image1 autoShow">
-					<img
-						src="./images/amz.avif"
-						alt="Preview of my amazon product clone"
-						class="work__img"
-					/>
+						<img
+							src="./images/watchascore.png"
+							alt="WatchaScore football scoreboard and control panel"
+							class="work__img"
+						/>
 					</div>
 					<div class="work__project work__content1 autoShow">
 						<h3 class="work__project-subtitle">
-                            Amazon product clone
+							WatchaScore
                         </h3>
-						<p>
-						  	<ul class="work__project-description1">
-								<li>
-									<i class='bx bxl-html5'></i> 
-                                    72.1%
-								</li>
-								<li>
-									<i class='bx bxl-css3'></i> 
-                                    27.9%
-								</li>
-							</ul>
-						</p>
+						<ul class="work__project-description1" aria-label="Technologies used">
+							<li><i class='bx bxl-javascript'></i> JavaScript</li>
+							<li><i class='bx bxl-css3'></i> CSS</li>
+							<li><i class='bx bxl-html5'></i> HTML</li>
+						</ul>
 						<p class="work__project-description2">
-							Simple Amazon product showcase using HTML and CSS elements like <strong>flexbox</strong> and custom fonts. 
+							A customizable live football scoreboard overlay for streamers and amateur broadcasters. It includes real-time controls, team search, themes, custom badges, persistent match state, keyboard shortcuts, and OBS integration.
 						</p>
 						<div class="work__project-links">
 							<a 
 								class="btn work__project-btn" 
-								aria-label="Link to my project github repository" 
-								href="https://github.com/px-pole/amazon-product-clone" 
-								target="_blank">
+								aria-label="View WatchaScore source code on GitHub"
+								href="https://github.com/px-pole/watchascore"
+								target="_blank"
+								rel="noopener noreferrer">
 								Source Code
 							</a>
 							<a 
 								class="btn work__project-btn" 
-								aria-label="Link to my project website" 
-								href="https://chic-hotteok-f9acc1.netlify.app/" 
-								target="_blank">
+								aria-label="Open the WatchaScore live application"
+								href="https://watchascore.netlify.app/"
+								target="_blank"
+								rel="noopener noreferrer">
 								Live Demo
 							</a>
 						</div>
@@ -366,51 +361,42 @@
 					
 					<!-- Project 2 -->
 					<h3 class="work__project-title autoShow">
-                        Basketball scoreboard
+						Password generator
                     </h3>
 					<div class="work__img-wrapper work__image2 autoShow">
 						<img
-							src="./images/basketball.avif"
-							alt="Preview of my Basketball scoreboard project"
+							src="./images/password.avif"
+							alt="Password generator interface"
 							class="work__img"
 						/>
 					</div>
 					<div class="work__project work__content2 autoShow">
 						<h3 class="work__project-subtitle">
-                            Basketball scoreboard
+							Password generator
                         </h3>
-						<p>
-							<ul class="work__project-description1">
-							  	<li>
-									<i class='bx bxl-html5'></i> 
-                                    31.9%
-								</li>
-							  	<li>
-									<i class='bx bxl-css3'></i> 
-                                    43.1%
-								</li>
-							  	<li>
-									<i class='bx bxl-javascript'></i> 
-                                    25%
-								</li>
-						  </ul>
-					  	</p>
+						<ul class="work__project-description1" aria-label="Technologies used">
+							<li><i class='bx bxl-javascript'></i> JavaScript</li>
+							<li><i class='bx bxl-css3'></i> CSS</li>
+							<li><i class='bx bxl-html5'></i> HTML</li>
+						</ul>
 						<p class="work__project-description2">
-							Scoreboard for the basketball game. Increments the score by 1, 2 or 3 points. Build using the JS concepts like <strong>textContent and onclick functions</strong>.
+							Generates two randomized passwords with adjustable lengths from 6 to 42 characters and an option to exclude symbols. Includes one-click copying for generated results.
 						</p>
 						<div class="work__project-links">
 							<a 
 								class="btn work__project-btn" 
-								aria-label="Link to my project github repository" 
-								href="https://github.com/px-pole/basketball-scoreboard" 
-								target="_blank">
+								aria-label="View password generator source code on GitHub"
+								href="https://github.com/px-pole/password-generator" 
+								target="_blank"
+								rel="noopener noreferrer">
 								Source Code
 							</a>
 							<a 
 								class="btn work__project-btn" 
-								aria-label="Link to my project website" 
-								href="https://tangerine-torte-d81067.netlify.app/" 
-								target="_blank">
+								aria-label="Open the password generator live demo"
+								href="https://wonderful-lamington-57d9aa.netlify.app/"
+								target="_blank"
+								rel="noopener noreferrer">
 								Live Demo
 							</a>
 						</div>
@@ -418,148 +404,34 @@
 					
 					<!-- Project 3 -->
 					<h3 class="work__project-title autoShow">
-                        Blackjack game
+						Browser extension
                     </h3>
 					<div class="work__img-wrapper work__image3 autoShow">
 						<img
-							src="./images/blackjack.avif"
-							alt="Preview of my Blackjack game project"
+							src="./images/bookmark.avif"
+							alt="Browser bookmark extension interface"
 							class="work__img"
 						/>
 					</div>
 					<div class="work__project work__content3 autoShow">
 						<h3 class="work__project-subtitle">
-                            Blackjack game
+							Browser extension
                         </h3>
-						<p>
-							<ul class="work__project-description1">
-							  	<li>
-									<i class='bx bxl-html5'></i> 
-                                    16.2%
-								</li>
-							  	<li>
-									<i class='bx bxl-css3'></i> 
-                                    18.1%
-								</li>
-							  	<li>
-									<i class='bx bxl-javascript'></i> 
-                                    65.7%
-								</li>
-						  </ul>
-					  	</p>
+						<ul class="work__project-description1" aria-label="Technologies used">
+							<li><i class='bx bxl-javascript'></i> JavaScript</li>
+							<li><i class='bx bxl-css3'></i> CSS</li>
+							<li><i class='bx bxl-html5'></i> HTML</li>
+						</ul>
 						<p class="work__project-description2">
-							The game starts with two random card values. You can draw more in order to reach 21 points. Game ends on Blackjack or bust. Contains JS concepts like <strong>arrays, if else statements, for loops and Math objects.</strong>
-						</p>	
-						<div class="work__project-links">
-							<a 
-								class="btn work__project-btn" 
-								aria-label="Link to my project github repository" 
-								href="https://github.com/px-pole/blackjack-game" 
-								target="_blank">
-								Source Code
-							</a>
-							<a 
-								class="btn work__project-btn" 
-								aria-label="Link to my project website" 
-								href="https://famous-salmiakki-51c034.netlify.app/" 
-								target="_blank">
-								Live Demo
-							</a>
-						</div>
-					</div>
-					
-					<!-- Project 4 -->
-					<h3 class="work__project-title autoShow">
-                        Password generator
-                    </h3>
-					<div class="work__img-wrapper work__image4 autoShow">
-						<img
-							src="./images/password.avif"
-							alt="Preview of my Password generator website"
-							class="work__img"
-						/>
-					</div>
-					<div class="work__project work__content4 autoShow">
-						<h3 class="work__project-subtitle">
-                            Password generator
-                        </h3>
-						<p>
-							<ul class="work__project-description1">
-								<li>
-									<i class='bx bxl-html5'></i> 
-                                    18.9%
-								</li>
-								<li>
-									<i class='bx bxl-css3'></i> 
-                                    32.7%
-								</li>
-								<li>
-									<i class='bx bxl-javascript'></i> 
-                                    48.4%
-								</li>
-						  </ul>
-					  	</p>
-						<p class="work__project-description2">
-							Generates two randomized strings. Allows to set the length of the password (6 - 42 characters) and an option to exclude special characters. Build with JS <strong>functions, for loops, if else statements, Math objects and DOM manipulation.</strong>
-						</p>
-						<div class="work__project-links">
-							<a 
-								class="btn work__project-btn" 
-								aria-label="Link to my project github repository" 
-								href="https://github.com/px-pole/password-generator" 
-								target="_blank">
-								Source Code
-							</a>
-							<a 
-								class="btn work__project-btn" 
-								aria-label="Link to my project website" 
-								href="https://wonderful-lamington-57d9aa.netlify.app/"
-								target="_blank">
-								Live Demo
-							</a>
-						</div>
-					</div>
-					
-					<!-- Project 5 -->
-					<h3 class="work__project-title autoShow">
-                        Browser extension
-                    </h3>
-					<div class="work__img-wrapper work__image5 autoShow">
-						<img
-							src="./images/bookmark.avif"
-							alt="Preview of my Browser extension project"
-							class="work__img"
-						/>
-					</div>
-					<div class="work__project work__content5 autoShow">
-						<h3 class="work__project-subtitle">
-                            Browser extension
-                        </h3>
-						<p>
-							<ul class="work__project-description1">
-								<li>
-									<i class='bx bxl-html5'></i> 
-                                    15.6%
-								</li>
-								<li>
-									<i class='bx bxl-css3'></i> 
-                                    18.4%
-								</li>
-								<li>
-									<i class='bx bxl-javascript'></i> 
-                                    66%
-								</li>
-						  	</ul>
-					  	</p>
-						<p class="work__project-description2">
-							Allows to save the website url either by the input window or grabbing from the currently active tab. Introduces <strong>innerHTML, inner.value, function parameters and arguments, template strings, localStorage and JSON objects.</strong>
+							A Chrome extension for saving links from manual input or the active browser tab. Saved bookmarks persist between sessions with local storage.
 						</p>
 						<div class="work__project-links">
 							<a 
 								class="btn work__project-btn github-only" 
-								aria-label="Link to my project github repository" 
+								aria-label="View browser extension source code on GitHub"
 								href="https://github.com/px-pole/myBookmark-chrome-extension" 
-								target="_blank">
+								target="_blank"
+								rel="noopener noreferrer">
 								Source Code
 							</a>
 						</div>
@@ -569,10 +441,10 @@
 
 			<section id="contact" class="contact container section">
 					<h2 class="contact__title autoShow">
-                        Get In Contact
+						Let's build something useful.
                     </h2>
 					<p class="contact__description autoShow">
-                        Whether you are starting a project, have business inquiries or just want to say hi, my inbox is always open so feel free to reach out and I will get back to you as soon as possible.
+						Have a project, role, or idea in mind? Send me a message and I'll get back to you as soon as I can.
                     </p>
 					<div class="contact__container ">
 						<div class="contact__container-left autoShow">
@@ -580,14 +452,8 @@
                                 Contact Information
                             </h3>
 							<p class="contact__container-left-subtitle">
-                                Fill out the form and send me your message<br>or contact me directly through email or social media.
+								Fill out the form and send me your message,<br>or connect with me through social media.
                             </p>
-							<a
-								class="contact__email" 
-								href="mailto:karol@gmail.com"
-								aria-label="Direct link to my email address">
-								karol.maciuk@gmail.com <i class='bx bx-mail-send'></i>
-							</a>
 							<ul class="contact__socials">
 								<li>
 									<a 
@@ -627,47 +493,56 @@
 						</div>
 						<div class="contact__container-right autoShow">
 							<form 
-								action="https://api.web3forms.com/submit" 
+								id="contact-form"
+								action="https://formspree.io/f/mdabbrdd"
 								method="POST"
 								class="contact__container-form"
 								>
 								<input 
 									type="hidden" 
-									name="access_key" 
-									value="bb3d2aa3-f1a3-4f45-9369-eedc253026f9"
+									name="_subject"
+									value="New portfolio contact"
 								/>
 								<input 
-									type="checkbox" 
-									name="botcheck" 
-									class="hidden" 
-									style="display: none;"
-								/>
-								<input
-									type="hidden" 
-									name="redirect" 
-									value="https://karolmaciuk-portfolio.netlify.app/"
+									type="text"
+									name="_gotcha"
+									class="contact__honeypot"
+									tabindex="-1"
+									autocomplete="off"
+									aria-hidden="true"
 								/>
 								<input 
 									type="text" 
+									id="contact-name"
 									name="name" 
+									autocomplete="name"
 									placeholder="Name" 
 									class="contact__input" 
 									required
 								/>
+								<label class="sr-only" for="contact-name">Name</label>
 								<input 
 									type="email" 
+									id="contact-email"
 									name="email" 
+									autocomplete="email"
 									placeholder="Email" 
 									class="contact__input" 
 									required
 								/>
-								<textarea name="message" placeholder="Message" class="contact__input contact__textarea" required></textarea>
+								<label class="sr-only" for="contact-email">Email</label>
+								<label class="sr-only" for="contact-message">Message</label>
+								<textarea id="contact-message" name="message" placeholder="Message" class="contact__input contact__textarea" required></textarea>
+								<p class="contact__privacy-notice">
+									Your details are processed securely by <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a> and used only to respond to your message. Please do not include sensitive personal information.
+								</p>
 								<button 
 									type="submit" 
 									class="contact__submit-btn btn" 
-									aria-label="Submit the form button">
-									Submit
+									aria-describedby="contact-form-status">
+									Send Message
 								</button>
+								<p id="contact-form-status" class="contact__form-status" role="status" aria-live="polite"></p>
 							</form>
 						</div>
 					</div>

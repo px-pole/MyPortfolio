@@ -7,7 +7,7 @@
     --color-slate600: #7a838f;
     --color-slate800: #252a31;
     --color-orange: #ff6b35;
-    --color-indigo: #30c5b5;
+    --color-red: #EF0107;
 
     --size-xxs: 0.5rem;
     --size-xs: 0.75rem;
@@ -34,6 +34,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
 
@@ -83,11 +84,11 @@ button {
 }
 
 a {
-    color: var(--color-indigo);
+    color: var(--color-red);
 }
 
 strong {
-    color: var(--color-indigo);
+    color: var(--color-red);
 }
 
 body::-webkit-scrollbar {

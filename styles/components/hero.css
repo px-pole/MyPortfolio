@@ -72,44 +72,46 @@
   	color: var(--color-slate600);
 }
 
-.hero__btn,
-.hero__btn:after {
-  	line-height: 2rem;
-  	padding: 0.2em 1em;
-  	font-size: var(--size-xs);
-	font-weight: 600;
-  	background: linear-gradient(45deg, transparent 5%, var(--color-orange) 5%, var(--color-orange) 95%, transparent 95%);
-  	border: 0;
-  	border-radius: 1px;
+.hero__btn {
+  	position: relative;
+  	display: inline-flex;
+  	align-items: center;
+  	justify-content: center;
+  	min-height: 2.6rem;
+  	padding: 0.7em 1.45em;
+  	font-size: 0.82rem;
+  	font-weight: 700;
+  	letter-spacing: 0.08em;
+  	text-transform: uppercase;
+  	background: rgba(255, 107, 53, 0.12);
+  	border: 1.5px solid rgba(255, 107, 53, 0.9);
+  	border-radius: 999px;
   	color: var(--color-light);
   	text-decoration: none;
-  	position: relative;
   	touch-action: manipulation;
+  	box-shadow: 0 0 0 1px rgba(255, 107, 53, 0.1), 0 12px 28px rgba(255, 107, 53, 0.08);
+  	transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.hero__btn:after {
-  	--slice-0: inset(50% 50% 50% 50%);
-  	--slice-1: inset(25% -6px 0 0);
-  	--slice-2: inset(20% -6px 30% 0);
-  	--slice-3: inset(15% -6px 25% 0);
-  	--slice-4: inset(35% -6px 43% 0);
-  	--slice-5: inset(30% -6px 15% 0);
-	
-  	content: 'CONTACT ME';
-  	display: block;
+.hero__btn::before {
+  	content: "";
   	position: absolute;
-  	top: 0;
-  	left: 0;
-  	right: 0;
-  	bottom: 0;
-	background: linear-gradient(45deg, transparent 5%, var(--color-orange) 5%, var(--color-orange) 95%, transparent 95%);
-	opacity: 0.8;
-  	clip-path: var(--slice-0);
+  	inset: 3px;
+  	border-radius: inherit;
+  	background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 107, 53, 0));
+  	opacity: 0;
+  	transition: opacity 0.25s ease;
 }
 
-.hero__btn:hover:after {
-  	animation: 1s glitch;
-  	animation-timing-function: steps(2, end);
+.hero__btn:hover {
+  	transform: translateY(-2px);
+  	background-color: rgba(255, 107, 53, 0.18);
+  	border-color: var(--color-orange);
+  	box-shadow: 0 0 0 1px rgba(255, 107, 53, 0.18), 0 18px 30px rgba(255, 107, 53, 0.16);
+}
+
+.hero__btn:hover::before {
+  	opacity: 1;
 }
 
 .hero__social-links {
@@ -263,7 +265,7 @@
 }
 
 .hero__subtitle {
-	color: var(--color-indigo);
+	color: var(--color-red);
 	font-family: "Manrope", sans-serif;
 	font-size: var(--size-xs);
 	font-weight: 700;
@@ -317,7 +319,7 @@
 	color: var(--color-light);
 	font-size: var(--size-s);
 	font-weight: 700;
-	text-decoration-color: var(--color-indigo);
+	text-decoration-color: var(--color-red);
 	text-underline-offset: 0.35rem;
 }
 

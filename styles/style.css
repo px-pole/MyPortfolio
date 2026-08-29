@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --color-dark: #0b0d10;
-    --color-light: #f4f4f0;
-    --color-slate400: #a9b0ba;
-    --color-slate600: #7a838f;
-    --color-slate800: #252a31;
-    --color-orange: #ff6b35;
-    --color-red: #EF0107;
+    --color-dark: #090b10;
+    --color-light: #f7f3ee;
+    --color-slate400: #b9bdc7;
+    --color-slate600: #7d8798;
+    --color-slate800: #2a3442;
+    --color-orange: #ff8a5b;
+    --color-red: #ff5a7c;
+    --color-amber: #f5c58a;
+    --color-gold: #f6d4a0;
+    --color-panel: rgba(16, 19, 25, 0.78);
+    --color-panel-strong: rgba(20, 23, 29, 0.92);
+    --luxury-shadow: 0 22px 50px rgba(255, 122, 89, 0.18);
+    --luxury-shadow-soft: 0 18px 40px rgba(9, 11, 16, 0.18);
 
     --size-xxs: 0.5rem;
     --size-xs: 0.75rem;
@@ -24,6 +30,13 @@
     --size-8xl: 6rem;
     --size-9xl: 8rem;
     --size-10x: 10rem;
+
+    /* Button Styles */
+    --button-gradient: linear-gradient(135deg, rgba(255, 145, 105, 0.98), rgba(255, 111, 74, 0.9) 35%, rgba(246, 212, 160, 0.7));
+    --button-shadow: 0 18px 36px rgba(255, 122, 89, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 0 0 1px rgba(255,255,255,0.04);
+    --button-shadow-hover: 0 24px 42px rgba(255, 122, 89, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 0 24px rgba(246, 212, 160, 0.2);
+    --button-border: 1px solid rgba(246, 212, 160, 0.45);
+    --button-border-hover: rgba(246, 212, 160, 0.75);
 }
 
 * {
@@ -47,14 +60,103 @@ html {
 }
 
 body {
+    position: relative;
     font-family: "Manrope", sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(255, 138, 91, 0.22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(245, 197, 138, 0.14), transparent 18%),
+        radial-gradient(circle at bottom right, rgba(255, 90, 124, 0.13), transparent 26%),
+        linear-gradient(180deg, #090b10 0%, #0b0f14 40%, #0d1117 100%);
     background-color: var(--color-dark);
-    background-image:
-        linear-gradient(rgba(122, 131, 143, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(122, 131, 143, 0.06) 1px, transparent 1px);
-    background-size: 48px 48px;
     color: var(--color-light);
     transition: background-color 1s ease;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, rgba(255,255,255,0.04), rgba(255,255,255,0) 18%, rgba(255,255,255,0.02) 58%, rgba(255,255,255,0));
+    opacity: 0.9;
+    z-index: -1;
+}
+
+body.light-mode {
+    background:
+        radial-gradient(circle at top left, rgba(255, 138, 91, 0.16), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(245, 197, 138, 0.14), transparent 20%),
+        radial-gradient(circle at bottom right, rgba(255, 90, 124, 0.12), transparent 22%),
+        linear-gradient(180deg, #f7f3ee 0%, #f0ece7 100%);
+    color: var(--color-light);
+}
+
+body.light-mode .hero__eyebrow,
+body.light-mode .eyebrow,
+body.light-mode .about__subtitle,
+body.light-mode .process__step span,
+body.light-mode .contact__form-status[data-state="success"] {
+    color: #c76b43;
+}
+
+body.light-mode .header,
+body.light-mode .contact__container,
+body.light-mode .process__step,
+body.light-mode .service-card,
+body.light-mode .proof__metrics div {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(122, 131, 143, 0.18);
+    box-shadow: 0 18px 36px rgba(15, 20, 25, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+body.light-mode .process__step:hover,
+body.light-mode .service-card:hover,
+body.light-mode .proof__metrics div:hover {
+    transform: translateY(-4px);
+    border-color: rgba(199, 107, 67, 0.55);
+    box-shadow: 0 22px 40px rgba(199, 107, 67, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.82);
+}
+
+body.light-mode .hero__title-text,
+body.light-mode .about__title,
+body.light-mode .about__description,
+body.light-mode .process__step h3,
+body.light-mode .services__intro h2,
+body.light-mode .work__title,
+body.light-mode .contact__title,
+body.light-mode .contact__container-left-title,
+body.light-mode .contact__container-left-subtitle,
+body.light-mode .contact__input,
+body.light-mode .footer__title {
+    color: #101216;
+}
+
+body.light-mode .hero__description,
+body.light-mode .process__step p,
+body.light-mode .proof__content p,
+body.light-mode .service-card p,
+body.light-mode .work__description,
+body.light-mode .contact__description,
+body.light-mode .contact__privacy-notice,
+body.light-mode .contact__input::placeholder,
+body.light-mode .footer p {
+    color: #5d6470;
+}
+
+body.light-mode .header__link,
+body.light-mode .mobile-nav__link,
+body.light-mode .contact__socials-link,
+body.light-mode .hero__link,
+body.light-mode .header__bars,
+body.light-mode .mobile-nav__theme-toggle {
+    color: #1c2128;
+}
+
+body.light-mode .header__brand span,
+body.light-mode strong,
+body.light-mode .hero__title-text strong {
+    color: #ca6438;
 }
 
 h1,
@@ -75,7 +177,9 @@ svg {
 }
 
 button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     border: none;
     background: none;
@@ -83,12 +187,41 @@ button {
     color: inherit;
 }
 
+button,
+.btn,
+.cv-btn,
+.hero__btn,
+.mobile-nav__cv-btn,
+.top-btn {
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease, filter 0.25s ease;
+}
+
 a {
-    color: var(--color-red);
+    color: var(--color-orange);
 }
 
 strong {
-    color: var(--color-red);
+    color: var(--color-gold);
+    text-shadow: 0 0 24px rgba(246, 212, 160, 0.18);
+}
+
+.eyebrow {
+    font-size: var(--size-s);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-amber);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero__eyebrow {
+    margin: -0.25rem 0 0;
+    font-size: var(--size-xs);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-amber);
+    font-weight: 700;
 }
 
 body::-webkit-scrollbar {

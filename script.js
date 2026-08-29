@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Constants
+    const CONSTANTS = {
+        THEME_KEY: 'theme',
+        THEME_LIGHT: 'light-mode',
+        SCROLL_THRESHOLD: 20,
+    };
+    
     // Mobile Navigation Handler
     const mobileNavHandler = () => {
         const headerBtn = document.querySelector('.header__bars');
@@ -36,24 +43,47 @@ document.addEventListener('DOMContentLoaded', () => {
         const mobileThemeToggle = document.querySelector('.mobile-nav__theme-toggle');
 
         const applyTheme = (theme) => {
-            document.body.className = theme || '';
-            themeToggle.checked = theme === 'light-mode';
+            const isLight = theme === CONSTANTS.THEME_LIGHT;
+            document.body.classList.toggle('light-mode', isLight);
+
+            if (themeToggle) {
+                themeToggle.checked = isLight;
+            }
+
+            if (mobileThemeToggle) {
+                mobileThemeToggle.setAttribute('aria-pressed', String(isLight));
+            }
         };
 
-        const savedTheme = localStorage.getItem('theme');
-        applyTheme(savedTheme);
+        try {
+            const savedTheme = localStorage.getItem(CONSTANTS.THEME_KEY) || '';
+            applyTheme(savedTheme);
+        } catch (error) {
+            console.warn('localStorage not available:', error);
+            applyTheme('');
+        }
 
-        themeToggle.addEventListener('change', () => {
-            const theme = themeToggle.checked ? 'light-mode' : '';
-            applyTheme(theme);
-            localStorage.setItem('theme', theme || '');
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('change', () => {
+                const theme = themeToggle.checked ? CONSTANTS.THEME_LIGHT : '';
+                applyTheme(theme);
+                try {
+                    localStorage.setItem(CONSTANTS.THEME_KEY, theme);
+                } catch (error) {
+                    console.warn('Could not save theme to localStorage:', error);
+                }
+            });
+        }
 
         if (mobileThemeToggle) {
             mobileThemeToggle.addEventListener('click', () => {
-                const currentTheme = document.body.className === 'light-mode' ? '' : 'light-mode';
+                const currentTheme = document.body.classList.contains('light-mode') ? '' : CONSTANTS.THEME_LIGHT;
                 applyTheme(currentTheme);
-                localStorage.setItem('theme', currentTheme);
+                try {
+                    localStorage.setItem(CONSTANTS.THEME_KEY, currentTheme);
+                } catch (error) {
+                    console.warn('Could not save theme to localStorage:', error);
+                }
             });
         }
     };
@@ -64,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scrollFunction = () => {
             topButton.style.display =
-                document.documentElement.scrollTop > 20 ? 'block' : 'none';
+                document.documentElement.scrollTop > CONSTANTS.SCROLL_THRESHOLD ? 'block' : 'none';
         };
 
         const topFunction = () => {
@@ -96,12 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     headers: { Accept: 'application/json' },
                 });
 
-                if (!response.ok) throw new Error('Formspree rejected the submission');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
 
                 form.reset();
                 status.textContent = 'Thanks, your message has been sent.';
                 status.dataset.state = 'success';
             } catch (error) {
+                console.error('Form submission error:', error);
                 status.textContent = 'Your message could not be sent. Please check your connection and try again.';
                 status.dataset.state = 'error';
             } finally {

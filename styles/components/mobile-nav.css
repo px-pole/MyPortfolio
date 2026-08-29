@@ -5,15 +5,18 @@
     z-index: 999;
     width: 100%;
     height: 100dvh;
-    background-color: rgba(11, 13, 16, 0.97);
+    background: rgba(11, 13, 16, 0.97);
+    border-right: 1px solid rgba(122, 131, 143, 0.18);
     display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .mobile-nav.open {
-    display: flex; /* Make it visible when 'open' class is added */
+    display: flex;
 }
 
 .mobile-nav__menu {
@@ -32,7 +35,11 @@
     font-weight: 600;
     color: var(--color-slate600);
     letter-spacing: 0;
-    transition: color 0.03s;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav__link:hover {
+    color: var(--color-orange);
 }
 
 .mobile-nav__social-links {
@@ -56,21 +63,32 @@
     color: var(--color-slate600);
 }
 
+body.light-mode .mobile-nav {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 .mobile-nav__cv-btn {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 0.95rem;
-    background-color: var(--color-orange);
-    color: var(--color-light);
-    border: 2px solid var(--color-orange);
-    padding: 0.35rem 1.6rem;
+    font-size: 0.8rem;
+    background: var(--button-gradient);
+    color: #fffaf6;
+    border: var(--button-border);
+    box-shadow: 0 18px 34px rgba(255, 138, 91, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
     border-radius: 999px;
-    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .mobile-nav__cv-btn:hover {
-    background-color: transparent;
-    border-color: var(--color-orange);
-    color: var(--color-light);
+    transform: translateY(-2px);
+    border-color: rgba(245, 197, 138, 0.8);
+    box-shadow: 0 20px 38px rgba(255, 138, 91, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+body.light-mode .mobile-nav__cv-btn {
+    box-shadow: 0 16px 28px rgba(255, 115, 78, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }

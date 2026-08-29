@@ -1,14 +1,21 @@
-.footer__title {
-    font-size: var(--size-xs);
-    font-weight: 400;
-    color: var(--color-slate600);
-    text-align: center;
-    letter-spacing: 0;
-    user-select: none;
-}
-
 .footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-top: 1px solid var(--color-slate800);
+    text-align: center;
+}
+
+.footer__title {
+    font-size: var(--size-l);
+    font-weight: 700;
+    color: var(--color-light);
+    letter-spacing: -0.04em;
+    user-select: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    font-size: var(--size-s);
+    color: var(--color-slate600);
+    margin: 0;
 }

@@ -11,7 +11,9 @@
     margin-top: 7rem;
 }
 
-.btn {
+.btn,
+.cv-btn,
+.mobile-nav__cv-btn {
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -20,17 +22,26 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     border-radius: 999px;
-    color: #fffaf6;
+    color: var(--button-text);
     background: var(--button-gradient);
     border: var(--button-border);
     box-shadow: var(--button-shadow);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, filter 0.25s ease;
-    padding: 0.8em 1.5em;
-    font-size: 0.82rem;
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
-.btn:hover {
+.btn,
+.cv-btn {
+    font-size: 0.82rem;
+}
+
+.btn {
+    padding: 0.8em 1.5em;
+}
+
+.btn:hover,
+.cv-btn:hover,
+.mobile-nav__cv-btn:hover {
     transform: translateY(-2px) scale(1.01);
     box-shadow: var(--button-shadow-hover);
     border-color: var(--button-border-hover);
@@ -38,28 +49,7 @@
 }
 
 .cv-btn {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-size: 0.82rem;
-    color: #fffaf6;
-    border-radius: 999px;
-    background: var(--button-gradient);
-    border: var(--button-border);
-    box-shadow: var(--button-shadow);
     padding: 0.65rem 1.7rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, filter 0.25s ease;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
-}
-
-.cv-btn:hover {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: var(--button-shadow-hover);
-    border-color: var(--button-border-hover);
-    background: linear-gradient(135deg, rgba(255, 151, 116, 0.98), rgba(255, 118, 82, 0.92) 38%, rgba(246, 212, 160, 0.8));
 }
 
 .social-link:hover {

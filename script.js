@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+const initialiseSite = () => {
     
     // Constants
     const CONSTANTS = {
@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNavHandler = () => {
         const headerBtn = document.querySelector('.header__bars');
         const mobileNav = document.querySelector('.mobile-nav');
+
+        if (!headerBtn || !mobileNav) return;
 
         const setMenuOpen = (isOpen) => {
             mobileNav.classList.toggle('open', isOpen);
@@ -92,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopHandler = () => {
         const topButton = document.querySelector('.top-btn');
 
+        if (!topButton) return;
+
         const scrollFunction = () => {
             topButton.style.display =
                 document.documentElement.scrollTop > CONSTANTS.SCROLL_THRESHOLD ? 'block' : 'none';
@@ -103,6 +107,99 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('scroll', scrollFunction);
         topButton.addEventListener('click', topFunction);
+    };
+
+    // Liquid navigation interactions for the desktop menu.
+    const liquidNavHandler = () => {
+        const header = document.querySelector('.header');
+        const menu = document.querySelector('.header__menu');
+        const activePill = document.querySelector('.header__active-pill');
+        const links = [...document.querySelectorAll('.header__link')];
+
+        if (!header || !menu || !activePill || !links.length) return;
+
+        let isNavigating = false;
+        let navigationTimeout;
+
+        const movePill = (link, animate = true) => {
+            if (window.innerWidth < 768) return;
+
+            const menuBounds = menu.getBoundingClientRect();
+            const linkBounds = link.getBoundingClientRect();
+            activePill.style.transition = animate ? '' : 'none';
+            activePill.style.width = `${linkBounds.width + 20}px`;
+            activePill.style.transform = `translateX(${linkBounds.left - menuBounds.left - 10}px)`;
+            activePill.style.opacity = '1';
+
+            requestAnimationFrame(() => {
+                if (!animate) activePill.style.transition = '';
+            });
+        };
+
+        const setActiveLink = (link, animate = true) => {
+            links.forEach((item) => item.classList.toggle('is-active', item === link));
+            movePill(link, animate);
+        };
+
+        links.forEach((link) => {
+            link.addEventListener('click', () => {
+                isNavigating = true;
+                setActiveLink(link);
+                window.clearTimeout(navigationTimeout);
+                navigationTimeout = window.setTimeout(() => {
+                    isNavigating = false;
+                    updateActiveOnScroll();
+                }, 1000);
+            });
+        });
+
+        const sections = links
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        const updateActiveOnScroll = () => {
+            if (isNavigating) {
+                window.clearTimeout(navigationTimeout);
+                navigationTimeout = window.setTimeout(() => {
+                    isNavigating = false;
+                    updateActiveOnScroll();
+                }, 150);
+                return;
+            }
+
+            const activeSection = sections.find((section) => {
+                const bounds = section.getBoundingClientRect();
+                return bounds.top <= window.innerHeight * 0.45 && bounds.bottom >= window.innerHeight * 0.25;
+            });
+            const activeLink = links.find((link) => link.getAttribute('href') === `#${activeSection?.id}`);
+            if (activeLink) setActiveLink(activeLink, false);
+        };
+
+        header.addEventListener('pointermove', (event) => {
+            const bounds = header.getBoundingClientRect();
+            header.style.setProperty('--glare-x', `${event.clientX - bounds.left}px`);
+            header.style.setProperty('--glare-y', `${event.clientY - bounds.top}px`);
+        });
+
+        window.addEventListener('resize', () => {
+            const activeLink = document.querySelector('.header__link.is-active') || links[0];
+            if (window.innerWidth < 768) {
+                activePill.style.opacity = '0';
+                return;
+            }
+            movePill(activeLink, false);
+        });
+        window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+        window.addEventListener('scrollend', () => {
+            if (!isNavigating) return;
+
+            window.clearTimeout(navigationTimeout);
+            isNavigating = false;
+            updateActiveOnScroll();
+        }, { passive: true });
+
+        setActiveLink(links[0], false);
+        updateActiveOnScroll();
     };
 
     // Contact Form Handler
@@ -148,5 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavHandler();
     darkModeHandler();
     backToTopHandler();
+    liquidNavHandler();
     contactFormHandler();
-});
+};
+
+initialiseSite();

@@ -35,10 +35,13 @@
 			<i class='bx bxs-up-arrow' ></i>
 		</button>
 
-        <header class="header container">
+		<header class="header container">
+			<span class="header__reflection" aria-hidden="true"></span>
+			<span class="header__glare" aria-hidden="true"></span>
 			<nav>
 				<a class="header__brand" href="#" aria-label="Karol Maciuk, back to top">KM<span>.</span></a>
 				<ul class="header__menu">
+					<li class="header__active-pill" aria-hidden="true"></li>
 					<li>
 						<a 
 							class="header__link" 
@@ -248,36 +251,6 @@
 					<p class="about__description autoShow">
 						Away from the editor, I'm usually playing video games, following football, or exploring new technology.
 					</p>
-					<hr class="about__hr">
-					<h3 class="about__subtitle autoShow">
-                        Technologies
-                    </h3>
-					<div class="about__ul_container">
-						<ul class="about__ul autoShow">
-							<li class="about__list">
-								<i class='bx bxl-html5'></i> 
-                                HTML
-							</li>
-							<li class="about__list">
-								<i class='bx bxl-css3' ></i> 
-                                CSS
-							</li>
-							<li class="about__list">
-								<i class='bx bxl-javascript' ></i> 
-                                JavaScript
-							</li>
-						</ul>
-						<ul class="about__ul autoShow">
-							<li class="about__list">
-								<i class='bx bxs-data' ></i> 
-                                SQL
-							</li>
-							<li class="about__list">
-								<i class='bx bxl-python' ></i> 
-                                Python
-							</li>
-						</ul>
-					</div>
 				</div>
 				<div class="about__img-wrapper autoShow">
 					<img 
@@ -370,16 +343,57 @@
 				<div class="work__container">
 					<!-- Project 1 -->
 					<h3 class="work__project-title autoShow">
-						WatchaScore
+						Ivenn
                     </h3>
 					<div class="work__img-wrapper work__image1 autoShow">
+						<img
+							src="./images/ivenn.avif"
+							alt="Ivenn household inventory application"
+							class="work__img"
+						/>
+					</div>
+					<div class="work__project work__content1 autoShow">
+						<h3 class="work__project-subtitle">
+							Ivenn
+                        </h3>
+						<ul class="work__project-stack" aria-label="Technologies used">
+							<li><i class='bx bxl-react'></i> React</li>
+							<li><i class='bx bxl-typescript'></i> TypeScript</li>
+							<li><i class='bx bxl-python'></i> Python</li>
+							<li><i class='bx bxs-data'></i> SQLite</li>
+						</ul>
+						<p class="work__project-content">
+							Built a desktop-first household inventory and warranty tracker for recording possessions, receipts, serial numbers, and replacement values. Ivenn helps households prepare insurance-ready exports and stay ahead of warranty expirations.
+						</p>
+						<ul class="work__project-impact" aria-label="Project impact points">
+							<li>Inventory organised by room and category</li>
+							<li>Receipt uploads and local OCR support</li>
+							<li>CSV and PDF exports for insurance records</li>
+						</ul>
+						<div class="work__project-links">
+							<a
+								class="btn work__project-btn"
+								aria-label="View Ivenn source code on GitHub"
+								href="https://github.com/px-pole/Ivenn"
+								target="_blank"
+								rel="noopener noreferrer">
+								Source Code
+							</a>
+						</div>
+					</div>
+
+					<!-- Project 2 -->
+					<h3 class="work__project-title autoShow">
+						WatchaScore
+                    </h3>
+					<div class="work__img-wrapper work__image2 autoShow">
 						<img
 							src="./images/watchascore.avif"
 							alt="WatchaScore football scoreboard and control panel"
 							class="work__img"
 						/>
 					</div>
-					<div class="work__project work__content1 autoShow">
+					<div class="work__project work__content2 autoShow">
 						<h3 class="work__project-subtitle">
 							WatchaScore
                         </h3>
@@ -416,18 +430,18 @@
 						</div>
 					</div>
 					
-					<!-- Project 2 -->
+					<!-- Project 3 -->
 					<h3 class="work__project-title autoShow">
 						Password generator
                     </h3>
-					<div class="work__img-wrapper work__image2 autoShow">
+					<div class="work__img-wrapper work__image3 autoShow">
 						<img
 							src="./images/password.avif"
 							alt="Password generator interface"
 							class="work__img"
 						/>
 					</div>
-					<div class="work__project work__content2 autoShow">
+					<div class="work__project work__content3 autoShow">
 						<h3 class="work__project-subtitle">
 							Password generator
                         </h3>
@@ -460,46 +474,6 @@
 								target="_blank"
 								rel="noopener noreferrer">
 								Live Demo
-							</a>
-						</div>
-					</div>
-					
-					<!-- Project 3 -->
-					<h3 class="work__project-title autoShow">
-						Browser extension
-                    </h3>
-					<div class="work__img-wrapper work__image3 autoShow">
-						<img
-							src="./images/bookmark.avif"
-							alt="Browser bookmark extension interface"
-							class="work__img"
-						/>
-					</div>
-					<div class="work__project work__content3 autoShow">
-						<h3 class="work__project-subtitle">
-							Browser extension
-                        </h3>
-						<ul class="work__project-stack" aria-label="Technologies used">
-							<li><i class='bx bxl-javascript'></i> JavaScript</li>
-							<li><i class='bx bxl-css3'></i> CSS</li>
-							<li><i class='bx bxl-html5'></i> HTML</li>
-						</ul>
-						<p class="work__project-content">
-							Designed a lightweight browser bookmark extension that helps users save links from either manual input or the active tab, while keeping saved items available across sessions with local storage.
-						</p>
-						<ul class="work__project-impact" aria-label="Project impact points">
-							<li>Quick link capture from the browser</li>
-							<li>Persistent data with local storage</li>
-							<li>Useful, practical utility tool</li>
-						</ul>
-						<div class="work__project-links">
-							<a 
-								class="btn work__project-btn" 
-								aria-label="View browser extension source code on GitHub"
-								href="https://github.com/px-pole/myBookmark-chrome-extension" 
-								target="_blank"
-								rel="noopener noreferrer">
-								Source Code
 							</a>
 						</div>
 					</div>

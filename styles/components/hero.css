@@ -23,11 +23,6 @@
 	text-transform: uppercase;
 }
 
-.hero__subtitle span::before,
-.hero__title {
-	display: none;
-}
-
 .hero__heading {
 	font-size: var(--size-5xl);
 	line-height: 0.9;
@@ -73,7 +68,7 @@
 	border: var(--button-border);
 	border-radius: 999px;
 	box-shadow: var(--button-shadow);
-	color: #fffaf6;
+	color: var(--button-text);
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
